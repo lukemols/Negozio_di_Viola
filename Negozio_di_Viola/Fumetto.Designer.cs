@@ -45,7 +45,7 @@ namespace Negozio_di_Viola
             int bx = 320;
             int tx = bx + 40;
             int deltaY = 50;
-            
+
             this.avanti = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.Button();
             this.menu2 = new System.Windows.Forms.Button();
@@ -82,14 +82,14 @@ namespace Negozio_di_Viola
 
             #region
 
-            if(pagina == 1)
+            if (pagina == 1)
             {
                 this.bOpt1.Location = new System.Drawing.Point(280, 600);
                 this.bOpt1.Size = new System.Drawing.Size(150, 75);
                 this.bOpt1.Text = text1;
             }
 
-            else if(pagina == 2)
+            else if (pagina == 2)
             {
                 this.bOpt1.Location = new System.Drawing.Point(bx, 490 + deltaY);
                 this.bOpt1.Size = new System.Drawing.Size(25, 25);
@@ -104,17 +104,17 @@ namespace Negozio_di_Viola
             #endregion
 
             // bOpt2
-            
+
             #region
-            
-            if(pagina == 1)
+
+            if (pagina == 1)
             {
                 this.bOpt2.Location = new System.Drawing.Point(480, 600);
                 this.bOpt2.Size = new System.Drawing.Size(150, 75);
                 this.bOpt2.Text = text2;
             }
 
-            else if(pagina == 2)
+            else if (pagina == 2)
             {
                 this.bOpt2.Location = new System.Drawing.Point(bx, 540 + deltaY);
                 this.bOpt2.Size = new System.Drawing.Size(25, 25);
@@ -127,7 +127,7 @@ namespace Negozio_di_Viola
             this.bOpt2.Click += new System.EventHandler(this.onClick);
 
             #endregion
-            
+
             // bOpt3
 
             #region
@@ -139,7 +139,7 @@ namespace Negozio_di_Viola
                 this.bOpt3.Text = text3;
             }
 
-            else if(pagina == 2)
+            else if (pagina == 2)
             {
                 this.bOpt3.Location = new System.Drawing.Point(bx, 590 + deltaY);
                 this.bOpt3.Size = new System.Drawing.Size(25, 25);
@@ -268,7 +268,7 @@ namespace Negozio_di_Viola
             #region
 
             this.avanti.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.avanti.Location = new System.Drawing.Point(600, 940);
+            this.avanti.Location = new System.Drawing.Point(600, 920);//[RIV] 600, 940
             this.avanti.Name = "avanti";
             this.avanti.Size = new System.Drawing.Size(150, 75);
             this.avanti.TabIndex = 6;
@@ -284,7 +284,7 @@ namespace Negozio_di_Viola
 
             this.menu.Text = "Menu";
             this.menu.Size = new System.Drawing.Size(150, 75);
-            this.menu.Location = new System.Drawing.Point(235, 940);
+            this.menu.Location = new System.Drawing.Point(235, 920);//[RIV] 235, 940
             this.menu.UseVisualStyleBackColor = true;
             this.menu.ForeColor = System.Drawing.Color.MidnightBlue;
             this.menu.Name = "menu";
@@ -333,15 +333,15 @@ namespace Negozio_di_Viola
 
             #region
 
-            if(pagina == 1)
+            if (pagina == 1)
             {
                 int x1, x2, x3, y, d1, d2, d3, dist;
 
                 d1 = 430;
                 d2 = 150;
                 d3 = 220;
-                dist = - 20;
-                x1 = 10;
+                dist = -20;
+                x1 = -20;//10;//[RIV]
                 x2 = x1 + d1 + dist;
                 x3 = x2 + d2 + dist + 10;
                 y = 260;
@@ -466,8 +466,8 @@ namespace Negozio_di_Viola
                 this.testo.Size = new System.Drawing.Size(660, 525);
                 this.testo.Font = new Font("Verdana", (float)widthFactor * 32F, FontStyle.Bold);
                 this.testo.Location = new System.Drawing.Point(10, 10);
-         //BY   Negozio2.text = Globals.fumChiamaCliente;
-         //BY   Negozio2.textSetted = true;
+                //BY   Negozio2.text = Globals.fumChiamaCliente;
+                //BY   Negozio2.textSetted = true;
             }
 
             else if (pagina == 3)
@@ -479,8 +479,8 @@ namespace Negozio_di_Viola
                 this.testo.Location = new System.Drawing.Point(10, 15);
                 this.testo.FlatAppearance.BorderSize = 2;
                 this.testo.BackColor = System.Drawing.Color.White;
-           //BY Negozio2.text = Globals.fumChiamaCliente;
-           //BY Negozio2.textSetted = true;
+                //BY Negozio2.text = Globals.fumChiamaCliente;
+                //BY Negozio2.textSetted = true;
             }
 
             else if (pagina == 4)
@@ -489,8 +489,8 @@ namespace Negozio_di_Viola
                 this.testo.Size = new System.Drawing.Size(660, 525);
                 this.testo.Font = new Font("Verdana", (float)widthFactor * 32F, FontStyle.Bold);
                 this.testo.Location = new System.Drawing.Point(10, 10);
-           //BY Negozio2.text = Globals.fumChiamaCliente;
-           //BY Negozio2.textSetted = true;
+                //BY Negozio2.text = Globals.fumChiamaCliente;
+                //BY Negozio2.textSetted = true;
             }
 
             else if (pagina == 100)
@@ -499,8 +499,8 @@ namespace Negozio_di_Viola
                 this.testo.Size = new System.Drawing.Size(660, 300);
                 this.testo.Font = new Font("Verdana", (float)widthFactor * 32F, FontStyle.Bold);
                 this.testo.Location = new System.Drawing.Point(10, 10);
-           //BY Negozio2.text = Globals.fumChiamaCliente;
-           //BY Negozio2.textSetted = true;
+                //BY Negozio2.text = Globals.fumChiamaCliente;
+                //BY Negozio2.textSetted = true;
             }
 
             this.testo.BackColor = System.Drawing.Color.White;
@@ -509,7 +509,7 @@ namespace Negozio_di_Viola
             this.testo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.testo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testo.ForeColor = System.Drawing.Color.MidnightBlue;
-            
+
             this.testo.Name = "testo";
             this.testo.TabIndex = 9;
             //this.testo.Text = "In fabbrica ho pagato le scarpe " + Mappa.pFabbrica + ". Voglio vendere le scarpe a ";
@@ -526,8 +526,8 @@ namespace Negozio_di_Viola
             this.panelTesto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.panelTesto.Location = new Point(0, 0);
             this.panelTesto.Name = "panelTesto";
-            
-            if(pagina != 100)
+
+            if (pagina != 100)
 
                 this.panelTesto.Size = new System.Drawing.Size(1120, 600);
 
@@ -561,7 +561,7 @@ namespace Negozio_di_Viola
             this.panelViola.TabIndex = 11;
             this.panelViola.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.panelViola.Size = new System.Drawing.Size(800, 1000);
-            this.panelViola.Location = new Point(710, 0);
+            this.panelViola.Location = new Point(720, 0);//710, 0 //[RIV]
             this.panelViola.Controls.Add(this.viola);
 
             #endregion
@@ -569,9 +569,9 @@ namespace Negozio_di_Viola
             // panel
 
             #region
-//          bmp = new Bitmap(Globals.immaginiPath + "nuvoletta.png");
+            //          bmp = new Bitmap(Globals.immaginiPath + "nuvoletta.png");
             bmp = new Bitmap(global::Negozio_di_Viola.Properties.Resources.nuvoletta);
-            BgImg = new Bitmap(bmp, new Size(1200, 1000));
+            BgImg = new Bitmap(bmp, new Size(1125, 1000));//[RIV]1200, 1000
             this.panel.BackgroundImage = BgImg;
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.None;
 
@@ -595,8 +595,8 @@ namespace Negozio_di_Viola
                 this.panel.Controls.Add(this.ok);
                 this.panel.Controls.Add(this.smile);
             }
-            
-            
+
+
             //this.panel.Controls.Add(this.esci);
 
             if (pagina != 100)
@@ -628,7 +628,7 @@ namespace Negozio_di_Viola
             this.Name = "Fumetto";
             this.Text = "Fumetto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            
+
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Controls.Add(this.panel);
             this.panel.Controls.Add(this.panelTesto);
@@ -662,7 +662,7 @@ namespace Negozio_di_Viola
             int p = 490;
             //int x = 226;
             //int p = 290;
-                        
+
             switch (disposizione)
             {
                 case 1:
@@ -725,7 +725,7 @@ namespace Negozio_di_Viola
                     {
                         text1 = "<\nMinore";
                         text2 = ">\nMaggiore";
-                        text3 = "=\nUguale"; 
+                        text3 = "=\nUguale";
                     }
 
                     else if (pagina == 2)
@@ -766,7 +766,7 @@ namespace Negozio_di_Viola
                         size2 = new System.Drawing.Size(x, 30);
                         point2 = new System.Drawing.Point(p, 400);
                         size3 = new System.Drawing.Size(x, 30);
-                        point3 = new System.Drawing.Point(p, 400); 
+                        point3 = new System.Drawing.Point(p, 400);
                     }
 
                     risCorretta = 3;
@@ -779,7 +779,7 @@ namespace Negozio_di_Viola
                     {
                         text1 = "=\nUguale";
                         text2 = ">\nMaggiore";
-                        text3 = "<\nMinore"; 
+                        text3 = "<\nMinore";
                     }
 
                     else if (pagina == 2)
@@ -806,7 +806,7 @@ namespace Negozio_di_Viola
                     {
                         text1 = "=\nUguale";
                         text2 = "<\nMinore";
-                        text3 = ">\nMaggiore"; 
+                        text3 = ">\nMaggiore";
                     }
 
                     else if (pagina == 2)
