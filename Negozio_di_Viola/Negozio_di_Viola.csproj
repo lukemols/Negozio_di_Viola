@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssegnazioneGuadagno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssegnazioneGuadagno.Designer.cs">
+      <DependentUpon>AssegnazioneGuadagno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calcolatrice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     </Compile>
     <Compile Include="Fumetto.Designer.cs">
       <DependentUpon>Fumetto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fumetto2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fumetto2.Designer.cs">
+      <DependentUpon>Fumetto2.cs</DependentUpon>
     </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="Guadagno.cs">
@@ -156,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fumetto.resx">
       <DependentUpon>Fumetto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fumetto2.resx">
+      <DependentUpon>Fumetto2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guadagno.resx">
       <DependentUpon>Guadagno.cs</DependentUpon>

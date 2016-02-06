@@ -338,7 +338,17 @@ namespace Negozio_di_Viola
                     break;
 
                 case 6:
-                    
+                    ///MESSO PER PROVARE IL LIVELLO
+                    for (int row = 0; row < 4; row++) //-----
+                    {
+                        if (row == Globals.indice_scarpe)
+                            row_index[row] = 4 * Globals.indice_scarpe;
+                        else
+                            row_index[row] = 4 * row;
+
+                        Inizializza_Scaffale(row + 1);
+                    } //-----
+                      // MessageBox.Show("indice_scarpe => row_index[0-3]  " + Globals.indice_scarpe + " => " +  row_index[0] + ' ' +  row_index[1] + ' ' +  row_index[2] + ' ' +  row_index[3] );  // DEBUG
                     break;
             }
         }
@@ -2681,7 +2691,7 @@ namespace Negozio_di_Viola
                     }
                     else if (soldi_spostati > costo_scarpe_selezionate) // non per il livello 1
                     {
-                        textInfo.Text = "I soldi spostati sono di pi� di quelli richiesti per acquistare il prodotto selezionato !!!";
+                        textInfo.Text = "I soldi spostati sono di più di quelli richiesti per acquistare il prodotto selezionato !!!";
                         smile.Image = global::Negozio_di_Viola.Properties.Resources.SmileTriste;
                     }
                     else if (cifra_scritta != costo_scarpe_selezionate && soldi_spostati == costo_scarpe_selezionate)

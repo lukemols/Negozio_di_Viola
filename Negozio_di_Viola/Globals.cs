@@ -223,6 +223,7 @@ namespace Negozio_di_Viola
 
         public static double[] Prezzi_Fabbrica_DEF = new double[]
         {
+            /* NASCONDIAMO I PREZZI DEL PROF PER METTERE PREZZI TONDI ED EVITARE PROBLEMI DI CAMBIO
             60.50,
             65.50,
             70.50,
@@ -239,6 +240,23 @@ namespace Negozio_di_Viola
             25.20,
             30.20,
             35.20
+            */
+            60.00,
+            65.00,
+            70.00,
+            75.00,
+            53.00,
+            58.00,
+            62.00,
+            67.00,
+            40.00,
+            45.00,
+            50.00,
+            55.00,
+            20.00,
+            25.00,
+            30.00,
+            35.00
         };
 
         public static double[] Prezzi_Negozio_DEF = new double[]
