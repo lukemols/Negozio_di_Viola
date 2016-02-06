@@ -15,6 +15,7 @@ namespace Negozio_di_Viola
     {
         HomePage home;
         Fumetto dialogo;
+        Fumetto2 fumetto2form;
         System.Timers.Timer timer;
 
 
@@ -303,8 +304,16 @@ namespace Negozio_di_Viola
         private void VisualizzaDialogo()
         {
             this.Close();
-            dialogo = new Fumetto(1);
-            dialogo.ShowDialog();
+            if(Globals.Livello == 6)
+            {
+                fumetto2form = new Fumetto2();
+                fumetto2form.ShowDialog();
+            }
+            else
+            {
+                dialogo = new Fumetto(1);
+                dialogo.ShowDialog();
+            }
         }
 
         private delegate void itemDelegate();
