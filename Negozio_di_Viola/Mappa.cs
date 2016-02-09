@@ -282,7 +282,8 @@ namespace Negozio_di_Viola
             
             this.thread = new Thread(new ThreadStart(this.ThreadProcSafe));
 
-			this.thread.Start();
+            try { this.thread.Start(); }//[RIV] vengono avviati thread già in esecuzione?
+            catch { }
 	    }
 
         private void ThreadProcSafe()
