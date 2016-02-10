@@ -16,12 +16,12 @@ namespace Negozio_di_Viola
         public static int[] pFase1 = new int[12];       // Situazione iniziale, prima che Viola vada in fabbrica.
         public static int[] pFase2 = new int[12];       // Situazione dopo l'acquisto delle scarpe in fabbrica.
         public static int[] pFase3 = new int[12];       // Situazione dopo la vendita delle scarpe al cliente.
-//---------------------------------------------
-        public static int[] seqAcquisto = new int[100]; 
-        public static int   nAcquisto = 0; 
-        public static int[] seqVendita = new int[100]; 
-        public static int   nVendita = 0; 
-//---------------------------------------------
+                                                        //---------------------------------------------
+        public static int[] seqAcquisto = new int[100];
+        public static int nAcquisto = 0;
+        public static int[] seqVendita = new int[100];
+        public static int nVendita = 0;
+        //---------------------------------------------
 
         public static List<int> casellaP2 = new List<int>();
         public static Image[] soldiImg = new Image[12];
@@ -39,19 +39,19 @@ namespace Negozio_di_Viola
 
         public static void Inizializza_soldiImg()
         {
-	    soldiImg[0] = global::Negozio_di_Viola.Properties.Resources._50euro;
-	    soldiImg[1] = global::Negozio_di_Viola.Properties.Resources._20euro;
-	    soldiImg[2] = global::Negozio_di_Viola.Properties.Resources._10euro;
-	    soldiImg[3] = global::Negozio_di_Viola.Properties.Resources._5euro;
-	    soldiImg[4] = global::Negozio_di_Viola.Properties.Resources._2euro;
-	    soldiImg[5] = global::Negozio_di_Viola.Properties.Resources._1euro;
-	    soldiImg[6] = global::Negozio_di_Viola.Properties.Resources._50cent;
-	    soldiImg[7] = global::Negozio_di_Viola.Properties.Resources._20cent;
-	    soldiImg[8] = global::Negozio_di_Viola.Properties.Resources._10cent;
-	    soldiImg[9] = global::Negozio_di_Viola.Properties.Resources._5cent;
-	    soldiImg[10] = global::Negozio_di_Viola.Properties.Resources._2cent;
-	    soldiImg[11] = global::Negozio_di_Viola.Properties.Resources._1cent;
-       }
+            soldiImg[0] = global::Negozio_di_Viola.Properties.Resources._50euro;
+            soldiImg[1] = global::Negozio_di_Viola.Properties.Resources._20euro;
+            soldiImg[2] = global::Negozio_di_Viola.Properties.Resources._10euro;
+            soldiImg[3] = global::Negozio_di_Viola.Properties.Resources._5euro;
+            soldiImg[4] = global::Negozio_di_Viola.Properties.Resources._2euro;
+            soldiImg[5] = global::Negozio_di_Viola.Properties.Resources._1euro;
+            soldiImg[6] = global::Negozio_di_Viola.Properties.Resources._50cent;
+            soldiImg[7] = global::Negozio_di_Viola.Properties.Resources._20cent;
+            soldiImg[8] = global::Negozio_di_Viola.Properties.Resources._10cent;
+            soldiImg[9] = global::Negozio_di_Viola.Properties.Resources._5cent;
+            soldiImg[10] = global::Negozio_di_Viola.Properties.Resources._2cent;
+            soldiImg[11] = global::Negozio_di_Viola.Properties.Resources._1cent;
+        }
 
 
         public static Queue<Image> riempiListaImg(int fase)
@@ -62,7 +62,7 @@ namespace Negozio_di_Viola
             int i, count;
             //double scale = 1;
 
-	    Inizializza_soldiImg();
+            Inizializza_soldiImg();
 
             if (fase == 1)
 
@@ -80,11 +80,11 @@ namespace Negozio_di_Viola
 
                 return null;
 
-            for (int j = 0; j < 12 ; j++ )
+            for (int j = 0; j < 12; j++)
             {
                 count = soldi[j];
 
-                if(count != 0)
+                if (count != 0)
                 {
                     tmp = soldiImg[j];
                     //var newWidth = (int)(scale * soldiImg[j].Width);
@@ -106,10 +106,10 @@ namespace Negozio_di_Viola
 
             return immagini;
         }
-        
+
         // Percorsi
 
-    //  public static string path = Directory.GetCurrentDirectory();
+        //  public static string path = Directory.GetCurrentDirectory();
         public static string prodottiPath = "Prodotti/";
         public static string immaginiPath = "Immagini/";
 
@@ -127,11 +127,11 @@ namespace Negozio_di_Viola
         public static MODE mode = MODE.auto;
         public static double speedFactor1 = 4.5; // per mappa 1.5
         public static double speedFactor2 = 14; // per cliente 4
-      
+
         // mode definisce la modalità del gioco: con mode impostato ad auto, il livello varia nel momento in cui l'utente
         // dimostra di avere compreso i concetti del livello corrente, con mode impostato a select, il livello viene scelto
         // manualmente.
-        
+
         public enum MODE
         {
             auto,
@@ -139,9 +139,9 @@ namespace Negozio_di_Viola
         }
 
         public static bool visualizzaDialogo = false;
-        
+
         // Stati:
-        
+
         // Stato 0: si può cliccare solo il negozio (che è vuoto)
         // Stato 1: si può cliccare solo la fabbrica perchè il negozio è vuoto ed è stato controllato
         // Stato 2: si può cliccare negozio, fabbrica, e si può chiamare un cliente
@@ -155,7 +155,8 @@ namespace Negozio_di_Viola
         public static string fumMagazzino = "Gli scaffali sono vuoti... Devo andare alla fabbrica";
         public static string fumSperoCliente = "Il portafoglio ora è vuoto... Spero venga un cliente a comprare le scarpe.";
         public static string fumChiamaCliente = "Ora aspetto un cliente che venga a comprare le scarpe!";
-        
+        public static string fumDeciderePrezzo = "Non ho ancora messo il prezzo delle scarpe, aiutami tu!";//[RIV]
+
         // Flag
 
         public static bool newGame = false;
@@ -163,17 +164,17 @@ namespace Negozio_di_Viola
         public static bool wallet_exists = false;  // Bool che mi dice se esiste già un portafoglio. False all'inizio del gioco.
 
         // Immagini
- //MOD  public static string[] listImgProdotti = Directory.GetFiles(prodottiPath, "*.jpg");
- //     public static string[] listImgProdotti;
+        //MOD  public static string[] listImgProdotti = Directory.GetFiles(prodottiPath, "*.jpg");
+        //     public static string[] listImgProdotti;
 
         // Vettori di stato
 
         public static List<Prodotto> listProdottiTutti = new List<Prodotto>();
         public static List<Prodotto> listProdottiNegozio = new List<Prodotto>();    // Lista prodotti (16) 
-        public static Prodotto[]         ProdottiNegozio = new Prodotto[16];    // Array prodotti (16) 
+        public static Prodotto[] ProdottiNegozio = new Prodotto[16];    // Array prodotti (16) 
 
         public static int[] portafogli = new int[12];   // (50e, 20e, 10e, 5e, 2e, 1e, 50c, 20c, 10c, 5c, 2c, 1c)
-        public static double[] valoreSoldi = new double[]{50.0, 20.0, 10.0, 5.0, 2.0, 1.0, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01};
+        public static double[] valoreSoldi = new double[] { 50.0, 20.0, 10.0, 5.0, 2.0, 1.0, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01 };
 
         //public static bool cliente = false;
 
@@ -185,8 +186,8 @@ namespace Negozio_di_Viola
         public static int screenHeight = (int)Screen.PrimaryScreen.Bounds.Height;
         public static double widthFactor = (double)screenWidth / 1280;  // 1241  1257
         public static double heightFactor = (double)screenHeight / 800; //  774   781
-    //  public static double widthFactor = (double)Screen.PrimaryScreen.Bounds.Width / 1600; //screenWidth;  // 1241  1257
-    //  public static double heightFactor = (double)Screen.PrimaryScreen.Bounds.Height / 900; //screenHeight; //  774   781
+                                                                        //  public static double widthFactor = (double)Screen.PrimaryScreen.Bounds.Width / 1600; //screenWidth;  // 1241  1257
+                                                                        //  public static double heightFactor = (double)Screen.PrimaryScreen.Bounds.Height / 900; //screenHeight; //  774   781
 
         // Dichiarazione Form
 
@@ -203,7 +204,7 @@ namespace Negozio_di_Viola
         public static string ACTIVE_BACKGROUND;
         public static string INACTIVE_BACKGROUND;
         public static string SELECTION;
-        public static int    Livello;
+        public static int Livello;
         public static string Tipo;
         public static string Lingua;
 
@@ -215,7 +216,7 @@ namespace Negozio_di_Viola
         public static string ACTIVE_BACKGROUND_DEF = "LightCyan";
         public static string INACTIVE_BACKGROUND_DEF = "LightSeaGreen";
         public static string SELECTION_DEF = "Red";
-        public static int    Livello_DEF = 1;
+        public static int Livello_DEF = 1;
         public static string Tipo_DEF = "Scarpe";
         public static string Lingua_DEF = "IT";
 
@@ -336,9 +337,9 @@ namespace Negozio_di_Viola
 
         public static void CreaPortafogli()
         {
-	    double prezzo_min =  1000.00;
-	    double prezzo_min2 = 1000.00;
-	    int    prezzo;
+            double prezzo_min = 1000.00;
+            double prezzo_min2 = 1000.00;
+            int prezzo;
 
             switch (Globals.Livello)
             {
@@ -347,57 +348,57 @@ namespace Negozio_di_Viola
                 case 2:
 
                     // Scelgo come target il paio di scarpe con il prezzo acquisto minore 
-		    // tra i 4 tipi possibili che l'utente puÃ² comprare e inserisco nel portafoglio 
+                    // tra i 4 tipi possibili che l'utente puÃ² comprare e inserisco nel portafoglio 
                     // il denaro contato per le scarpe scelte.
 
-                    for (int i=0; i<4; i++)
-                        if (Globals.listProdottiNegozio[4*i].PrezzoAcquisto < prezzo_min)
+                    for (int i = 0; i < 4; i++)
+                        if (Globals.listProdottiNegozio[4 * i].PrezzoAcquisto < prezzo_min)
                         {
-                            prezzo_min = Globals.listProdottiNegozio[4*i].PrezzoAcquisto;
-		            Globals.indice_scarpe = i;
+                            prezzo_min = Globals.listProdottiNegozio[4 * i].PrezzoAcquisto;
+                            Globals.indice_scarpe = i;
                         }
 
-                    Globals.scarpe = Globals.listProdottiNegozio[4*Globals.indice_scarpe];
+                    Globals.scarpe = Globals.listProdottiNegozio[4 * Globals.indice_scarpe];
 
                     Globals.pFabbrica = Convert.ToString(Globals.scarpe.PrezzoAcquisto) + "â¬";
                     Globals.pNegozio = Convert.ToString(Globals.scarpe.PrezzoVendita) + "â¬";
 
                     prezzo = (int)Globals.scarpe.prezzo_acquisto;
 
-                    Globals.nAcquisto = 0; 
+                    Globals.nAcquisto = 0;
 
-		    while (prezzo != 0)
+                    while (prezzo != 0)
                     {
-            		if (prezzo >= 50)
-            		{
+                        if (prezzo >= 50)
+                        {
                             Insert50E();
-			    prezzo -= 50;
-            		}
-            		else if (prezzo >= 20)
-            		{
+                            prezzo -= 50;
+                        }
+                        else if (prezzo >= 20)
+                        {
                             Insert20E();
-			    prezzo -= 20;
-            		}
-            		else if (prezzo >= 10)
-            		{
+                            prezzo -= 20;
+                        }
+                        else if (prezzo >= 10)
+                        {
                             Insert10E();
-			    prezzo -= 10;
-            		}
-            		else if (prezzo >= 5)
-            		{
+                            prezzo -= 10;
+                        }
+                        else if (prezzo >= 5)
+                        {
                             Insert5E();
-			    prezzo -= 5;
-            		}
-            		else if (prezzo >= 2)
-            		{
+                            prezzo -= 5;
+                        }
+                        else if (prezzo >= 2)
+                        {
                             Insert2E();
-			    prezzo -= 2;
-            		}
-            		else if (prezzo >= 1)
-            		{
+                            prezzo -= 2;
+                        }
+                        else if (prezzo >= 1)
+                        {
                             Insert1E();
-			    prezzo -= 1;
-            		}
+                            prezzo -= 1;
+                        }
                     }
 
                     break;
@@ -411,62 +412,62 @@ namespace Negozio_di_Viola
                 case 6:
 
                     // Scelgo come target il paio di scarpe con il prezzo acquisto minore 
-		    // tra i 4 tipi possibili che l'utente puÃ² comprare e inserisco nel portafoglio 
+                    // tra i 4 tipi possibili che l'utente puÃ² comprare e inserisco nel portafoglio 
                     // una cifra >= del denaro contato per le scarpe scelte e < del prezzo delle scarpe 
-		    // con prezzo immediatamente superiore.
+                    // con prezzo immediatamente superiore.
 
-                    for (int i=0; i<4; i++)
-                        if (Globals.listProdottiNegozio[4*i].PrezzoAcquisto < prezzo_min)
+                    for (int i = 0; i < 4; i++)
+                        if (Globals.listProdottiNegozio[4 * i].PrezzoAcquisto < prezzo_min)
                         {
-                            prezzo_min = Globals.listProdottiNegozio[4*i].PrezzoAcquisto;
-		            Globals.indice_scarpe = i;
+                            prezzo_min = Globals.listProdottiNegozio[4 * i].PrezzoAcquisto;
+                            Globals.indice_scarpe = i;
                         }
 
-                    Globals.scarpe = Globals.listProdottiNegozio[4*Globals.indice_scarpe];
+                    Globals.scarpe = Globals.listProdottiNegozio[4 * Globals.indice_scarpe];
 
                     Globals.pFabbrica = Convert.ToString(Globals.scarpe.PrezzoAcquisto) + "â¬";
                     Globals.pNegozio = Convert.ToString(Globals.scarpe.PrezzoVendita) + "â¬";
 
-                    for (int i=0; i<4; i++)
-                        if ( (i!=Globals.indice_scarpe) && (Globals.listProdottiNegozio[4*i].PrezzoAcquisto < prezzo_min2) )
-                            prezzo_min2 = Globals.listProdottiNegozio[4*i].PrezzoAcquisto;
+                    for (int i = 0; i < 4; i++)
+                        if ((i != Globals.indice_scarpe) && (Globals.listProdottiNegozio[4 * i].PrezzoAcquisto < prezzo_min2))
+                            prezzo_min2 = Globals.listProdottiNegozio[4 * i].PrezzoAcquisto;
 
-                    prezzo = Globals.global_rnd.Next((int)prezzo_min, (int)(prezzo_min2 - 1));  
+                    prezzo = Globals.global_rnd.Next((int)prezzo_min, (int)(prezzo_min2 - 1));
 
-                    Globals.nAcquisto = 0; 
+                    Globals.nAcquisto = 0;
 
-		    while (prezzo != 0)
+                    while (prezzo != 0)
                     {
-            		if (prezzo >= 50)
-            		{
+                        if (prezzo >= 50)
+                        {
                             Insert50E();
-			    prezzo -= 50;
-            		}
-            		else if (prezzo >= 20)
-            		{
+                            prezzo -= 50;
+                        }
+                        else if (prezzo >= 20)
+                        {
                             Insert20E();
-			    prezzo -= 20;
-            		}
-            		else if (prezzo >= 10)
-            		{
+                            prezzo -= 20;
+                        }
+                        else if (prezzo >= 10)
+                        {
                             Insert10E();
-			    prezzo -= 10;
-            		}
-            		else if (prezzo >= 5)
-            		{
+                            prezzo -= 10;
+                        }
+                        else if (prezzo >= 5)
+                        {
                             Insert5E();
-			    prezzo -= 5;
-            		}
-            		else if (prezzo >= 2)
-            		{
+                            prezzo -= 5;
+                        }
+                        else if (prezzo >= 2)
+                        {
                             Insert2E();
-			    prezzo -= 2;
-            		}
-            		else if (prezzo >= 1)
-            		{
+                            prezzo -= 2;
+                        }
+                        else if (prezzo >= 1)
+                        {
                             Insert1E();
-			    prezzo -= 1;
-            		}
+                            prezzo -= 1;
+                        }
                     }
 
                     break;
@@ -494,15 +495,15 @@ namespace Negozio_di_Viola
             {
                 Globals.portafogli[0]++;
                 Globals.pFase1[0]++;
-                Globals.seqAcquisto[Globals.nAcquisto++] = 0;  
+                Globals.seqAcquisto[Globals.nAcquisto++] = 0;
             }
 
             else
             {
                 Insert20E();
                 Insert10E();
-                
-                if(Globals.pFase1[3] != 6)
+
+                if (Globals.pFase1[3] != 6)
                 {
                     Insert20E();
                 }
@@ -515,18 +516,18 @@ namespace Negozio_di_Viola
                     {
                         Globals.portafogli[2] += 2;
                         Globals.pFase1[2] += 2;
-                        Globals.seqAcquisto[Globals.nAcquisto++] = 2;  
-                        Globals.seqAcquisto[Globals.nAcquisto++] = 2;  
+                        Globals.seqAcquisto[Globals.nAcquisto++] = 2;
+                        Globals.seqAcquisto[Globals.nAcquisto++] = 2;
                     }
 
                     else
                     {
                         Globals.portafogli[1]++;
                         Globals.pFase1[1]++;
-                        Globals.seqAcquisto[Globals.nAcquisto++] = 1;  
+                        Globals.seqAcquisto[Globals.nAcquisto++] = 1;
                     }
                 }
-                
+
             }
         }
 
@@ -540,7 +541,7 @@ namespace Negozio_di_Viola
             {
                 Globals.portafogli[1]++;
                 Globals.pFase1[1]++;
-                Globals.seqAcquisto[Globals.nAcquisto++] = 1;  
+                Globals.seqAcquisto[Globals.nAcquisto++] = 1;
             }
 
             else
@@ -560,15 +561,15 @@ namespace Negozio_di_Viola
             {
                 Globals.portafogli[3] += 2;
                 Globals.pFase1[3] += 2;
-                Globals.seqAcquisto[Globals.nAcquisto++] = 3;  
-                Globals.seqAcquisto[Globals.nAcquisto++] = 3;  
+                Globals.seqAcquisto[Globals.nAcquisto++] = 3;
+                Globals.seqAcquisto[Globals.nAcquisto++] = 3;
             }
 
             else
             {
                 Globals.portafogli[2]++;
                 Globals.pFase1[2]++;
-                Globals.seqAcquisto[Globals.nAcquisto++] = 2;  
+                Globals.seqAcquisto[Globals.nAcquisto++] = 2;
             }
         }
 
@@ -578,7 +579,7 @@ namespace Negozio_di_Viola
         {
             Globals.portafogli[3]++;
             Globals.pFase1[3]++;
-            Globals.seqAcquisto[Globals.nAcquisto++] = 3;  
+            Globals.seqAcquisto[Globals.nAcquisto++] = 3;
         }
 
 
@@ -587,7 +588,7 @@ namespace Negozio_di_Viola
         {
             Globals.portafogli[4]++;
             Globals.pFase1[4]++;
-            Globals.seqAcquisto[Globals.nAcquisto++] = 4;  
+            Globals.seqAcquisto[Globals.nAcquisto++] = 4;
         }
 
 
@@ -596,18 +597,18 @@ namespace Negozio_di_Viola
         {
             Globals.portafogli[5]++;
             Globals.pFase1[5]++;
-            Globals.seqAcquisto[Globals.nAcquisto++] = 5;  
+            Globals.seqAcquisto[Globals.nAcquisto++] = 5;
         }
 
 
 
-       public static void CostruisciSequenzaVendita()
+        public static void CostruisciSequenzaVendita()
         {
-           double prezzo1, prezzo2; 
-           double prezzo_double, prezzo1_double, prezzo2_double;
-           int    prezzo_int, prezzo1_int, prezzo2_int;
+            double prezzo1, prezzo2;
+            double prezzo_double, prezzo1_double, prezzo2_double;
+            int prezzo_int, prezzo1_int, prezzo2_int;
 
-	    prezzo1 = Globals.prezzo1;
+            prezzo1 = Globals.prezzo1;
             prezzo1_int = Convert.ToInt16(prezzo1);
 
             if (prezzo1_int > Globals.prezzo1)
@@ -633,48 +634,48 @@ namespace Negozio_di_Viola
 
                     for (int i = 0; i < Globals.nAcquisto; i++)
                     {
-                        Globals.seqVendita[i] = Globals.seqAcquisto[i]; 
+                        Globals.seqVendita[i] = Globals.seqAcquisto[i];
                         Globals.pFase3[Globals.seqAcquisto[i]]++;
                     }
-        
+
                     Globals.nVendita = Globals.nAcquisto;
-        
-        	        prezzo_int = prezzo1_int - prezzo2_int;
-        	        prezzo_double = prezzo1_double - prezzo2_double;
-        
-                    while((prezzo_int!=0) || (prezzo_double!=0))
+
+                    prezzo_int = prezzo1_int - prezzo2_int;
+                    prezzo_double = prezzo1_double - prezzo2_double;
+
+                    while ((prezzo_int != 0) || (prezzo_double != 0))
                     {
-                        if(prezzo_int >= 50)
+                        if (prezzo_int >= 50)
                         {
                             prezzo_int = prezzo_int - 50;
                             Globals.pFase3[0]++;
                             Globals.seqVendita[Globals.nVendita++] = 0;
                         }
-                        else if(prezzo_int >= 20)
+                        else if (prezzo_int >= 20)
                         {
                             prezzo_int = prezzo_int - 20;
                             Globals.pFase3[1]++;
                             Globals.seqVendita[Globals.nVendita++] = 1;
                         }
-                        else if(prezzo_int >= 10)
+                        else if (prezzo_int >= 10)
                         {
                             prezzo_int = prezzo_int - 10;
                             Globals.pFase3[2]++;
                             Globals.seqVendita[Globals.nVendita++] = 2;
                         }
-                        else if(prezzo_int >= 5)
+                        else if (prezzo_int >= 5)
                         {
                             prezzo_int = prezzo_int - 5;
                             Globals.pFase3[3]++;
                             Globals.seqVendita[Globals.nVendita++] = 3;
                         }
-                        else if(prezzo_int >= 2)
+                        else if (prezzo_int >= 2)
                         {
                             prezzo_int = prezzo_int - 2;
                             Globals.pFase3[4]++;
                             Globals.seqVendita[Globals.nVendita++] = 4;
                         }
-                        else if(prezzo_int >= 1)
+                        else if (prezzo_int >= 1)
                         {
                             prezzo_int = prezzo_int - 1;
                             Globals.pFase3[5]++;
@@ -721,7 +722,7 @@ namespace Negozio_di_Viola
                             prezzo_double = 0;
                             prezzo_int = 0;
                         }
-    
+
                     }
 
                     break;
@@ -735,43 +736,43 @@ namespace Negozio_di_Viola
                 case 6:
 
                     Globals.nVendita = 0;
-        
-        	        prezzo_int = prezzo1_int;
-        	        prezzo_double = prezzo1_double;
-        
-                    while((prezzo_int!=0) || (prezzo_double!=0))
+
+                    prezzo_int = prezzo1_int;
+                    prezzo_double = prezzo1_double;
+
+                    while ((prezzo_int != 0) || (prezzo_double != 0))
                     {
-                        if(prezzo_int >= 50)
+                        if (prezzo_int >= 50)
                         {
                             prezzo_int = prezzo_int - 50;
                             Globals.pFase3[0]++;
                             Globals.seqVendita[Globals.nVendita++] = 0;
                         }
-                        else if(prezzo_int >= 20)
+                        else if (prezzo_int >= 20)
                         {
                             prezzo_int = prezzo_int - 20;
                             Globals.pFase3[1]++;
                             Globals.seqVendita[Globals.nVendita++] = 1;
                         }
-                        else if(prezzo_int >= 10)
+                        else if (prezzo_int >= 10)
                         {
                             prezzo_int = prezzo_int - 10;
                             Globals.pFase3[2]++;
                             Globals.seqVendita[Globals.nVendita++] = 2;
                         }
-                        else if(prezzo_int >= 5)
+                        else if (prezzo_int >= 5)
                         {
                             prezzo_int = prezzo_int - 5;
                             Globals.pFase3[3]++;
                             Globals.seqVendita[Globals.nVendita++] = 3;
                         }
-                        else if(prezzo_int >= 2)
+                        else if (prezzo_int >= 2)
                         {
                             prezzo_int = prezzo_int - 2;
                             Globals.pFase3[4]++;
                             Globals.seqVendita[Globals.nVendita++] = 4;
                         }
-                        else if(prezzo_int >= 1)
+                        else if (prezzo_int >= 1)
                         {
                             prezzo_int = prezzo_int - 1;
                             Globals.pFase3[5]++;
@@ -818,7 +819,7 @@ namespace Negozio_di_Viola
                             prezzo_double = 0;
                             prezzo_int = 0;
                         }
-    
+
                     }
 
                     break;
@@ -835,10 +836,10 @@ namespace Negozio_di_Viola
         {
             for (int i = 0; i < 12; i++)
             {
-                if(Globals.portafogli[i] > 0)
+                if (Globals.portafogli[i] > 0)
                     return false;
             }
-	    return true;
+            return true;
         }
 
         public static double GetSoldiPortafoglio()
@@ -867,7 +868,7 @@ namespace Negozio_di_Viola
         {
             int i = 0;
 
-            if(listProdottiNegozio.Count == 0)
+            if (listProdottiNegozio.Count == 0)
             {
                 System.Console.WriteLine("Nessun prodotto nel negozio!!");
             }
@@ -880,9 +881,9 @@ namespace Negozio_di_Viola
                 }
             }
         }
-	///////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////
 
-	        private void MyGlobals()
+        private void MyGlobals()
         {
         }
 
@@ -890,26 +891,26 @@ namespace Negozio_di_Viola
         public static string Mese = "Novembre";
         public static string Anno = "2015";
 
-        public static string Titolo_Text =  "Il Negozio di Viola";
-	public static string Sottotitolo_Text = "Versione " + Versione + ", " + Mese + " " + Anno ;
+        public static string Titolo_Text = "Il Negozio di Viola";
+        public static string Sottotitolo_Text = "Versione " + Versione + ", " + Mese + " " + Anno;
 
         public static string Programma_text = Titolo_Text;
         public static string Versione_text = Sottotitolo_Text;
         public static string Autori_text = "Francesco Curatelli e Chiara Martinengo";
         public static string Ditta_text = "Università di Genova";
-        public static string Contatto_text = "Per contattare gli Autori:    curatelli@unige.it"; 
+        public static string Contatto_text = "Per contattare gli Autori:    curatelli@unige.it";
         public static string Collab_text = ""; // "(hanno collaborato alla realizzazione:\r\nxxxxx)";
 
         public static string ApplicationData_text = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         public static string EastLab_text = "EAST-Lab";
-        public static string CartellaLocale_text = Path.Combine(ApplicationData_text , EastLab_text , Programma_text);
+        public static string CartellaLocale_text = Path.Combine(ApplicationData_text, EastLab_text, Programma_text);
 
         public static string Licenza_text = "LICENZA FREEWARE - Questo programma software è distribuito gratuitamente per uso personale e non commerciale, ed è rilasciato così com'è, senza garanzie di alcun tipo, esplicite o implicite (incluse, senza limitazioni, le garanzie implicite di buona qualità ed idoneità ad un uso specifico). Tutti i rischi derivanti dal funzionamento o dal mancato funzionamento del programma software sono a carico dell'Utente.  In nessun caso gli Autori potranno essere considerati responsabili per qualsiasi danno diretto o indiretto di qualsiasi tipo (inclusi, senza limitazioni, danni per perdita di profitti, di interruzione di servizi, perdite di dati, o ogni altra perdita pecuniaria) derivanti dall'utilizzo o dalla impossibilità di utilizzo del programma software, anche se gli Autori sono stati avvisati sulla possibilità che si verifichino questi danni.  Installando, copiando o utilizzando in qualsiasi modo il programma software l'Utente accetta implicitamente ed in tutte le loro parti le suddette condizioni.";
 
     }
 
-	///////////////////////////////////////////////////////////////////////////////////
-      
+    ///////////////////////////////////////////////////////////////////////////////////
+
 
     // Classe per contenere i prodotti da gestire all'interno del gioco.
 
@@ -950,4 +951,4 @@ namespace Negozio_di_Viola
 
 
 
-    
+
