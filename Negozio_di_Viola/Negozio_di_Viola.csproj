@@ -140,6 +140,12 @@
     <Compile Include="Negozio2.designer.cs">
       <DependentUpon>Negozio2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negozio3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negozio3.Designer.cs">
+      <DependentUpon>Negozio3.cs</DependentUpon>
+    </Compile>
     <Compile Include="NonSo.cs">
       <SubType>Form</SubType>
     </Compile>

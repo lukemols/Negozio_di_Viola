@@ -96,7 +96,7 @@ namespace Negozio_di_Viola
                 c.Font = new Font("Verdana", (float)widthFactor * 16F, FontStyle.Regular);
             }
 
-            textBox.Text = Globals.fumDeciderePrezzo; //ADD da designer
+          //  textBox.Text = Globals.fumDeciderePrezzo; //ADD da designer
         }
 
         void Visualizzazione()

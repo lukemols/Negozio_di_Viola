@@ -22,6 +22,7 @@ namespace Negozio_di_Viola
 
         Negozio1 ngz1;
         Negozio2 ngz2;
+        Negozio3 ngz3;
         Fabbrica mgzz;
         HomePage pagIniz;
         Cliente cl;
@@ -455,8 +456,16 @@ namespace Negozio_di_Viola
 
                             if (Globals.visualizzaDialogo)
                             {
-                                ngz1 = new Negozio1();
-                                ngz1.ShowDialog();
+                                if (Globals.Livello == 6)
+                                {
+                                    ngz3 = new Negozio3();
+                                    ngz3.ShowDialog();
+                                }
+                                else
+                                {
+                                    ngz1 = new Negozio1();
+                                    ngz1.ShowDialog();
+                                }
                             }
 
                             else
