@@ -216,7 +216,7 @@ namespace Negozio_di_Viola
         public static string ACTIVE_BACKGROUND_DEF = "LightCyan";
         public static string INACTIVE_BACKGROUND_DEF = "LightSeaGreen";
         public static string SELECTION_DEF = "Red";
-        public static int Livello_DEF = 1;
+        public static int Livello_DEF = 6; ////////////////////MESSO SOLO PER VELOCITA'!!!
         public static string Tipo_DEF = "Scarpe";
         public static string Lingua_DEF = "IT";
 

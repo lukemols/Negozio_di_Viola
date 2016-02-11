@@ -19,8 +19,8 @@ namespace Negozio_di_Viola
             FormBorderStyle = FormBorderStyle.None; //Nascondi la barra della finestra
             WindowState = FormWindowState.Maximized; // massimizza a schermo intero
 
-            AdattamentoRisoluzione();
             CaricaImmagini();
+            AdattamentoRisoluzione();
             CaricaTesto();
             SettaColori();
         }
@@ -74,7 +74,7 @@ namespace Negozio_di_Viola
             ViolaPictureBox.Height = screen_Height;
             ViolaPictureBox.Width = (int)(0.25 * screen_Width);
             ViolaPictureBox.Location = new Point((int)(0.75 * screen_Width), 0);
-            ViolaPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            ViolaPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             // Nuvoletta
             NuvolettaPictureBox.Height = (int)(0.85 * screen_Height);
             NuvolettaPictureBox.Width = (int)(0.75 * screen_Width);
@@ -107,6 +107,62 @@ namespace Negozio_di_Viola
             NonSoButton.Width = screen_Width / 10;
             NonSoButton.Location = new Point((int)(0.4 * screen_Width), (int)(0.65 * screen_Height));
             NonSoButton.Font = buttonFont;
+
+            //Testo nella nuvoletta
+            //Label iniziale
+            fontsize = (screen_Width + 125) / 100;
+            Font labelFont = new Font("Verdana", fontsize, FontStyle.Bold);
+            FumettoLabel1.Text = "Hai visto che non ho ancora fissato il prezzo delle scarpe?";
+            FumettoLabel1.Location = new Point((int)(0.15 * screen_Width), (int)(0.15 * screen_Height));
+            FumettoLabel1.Font = labelFont;
+            FumettoLabel1.BackColor = Color.White;
+            //Prima Label seconda riga
+            int y = FumettoLabel1.Location.Y + FumettoLabel1.Height + 20;
+            FumettoLabel21.Text = "(Se non hai visto, torna al ";
+            FumettoLabel21.Location = new Point((int)(0.15 * screen_Width), y);
+            FumettoLabel21.Font = labelFont;
+            FumettoLabel21.BackColor = Color.White;
+            //Pulsante Negozio
+            int x = FumettoLabel21.Location.X + FumettoLabel21.Width + 10;
+            NegozioButton.Height = FumettoLabel21.Height + 10;
+            NegozioButton.Width = screen_Width / 10;
+            NegozioButton.Text = "NEGOZIO";
+            NegozioButton.Location = new Point(x, y - 5);
+            NegozioButton.Font = buttonFont;
+            //Seconda Label seconda riga
+            x += NegozioButton.Width + 10;
+            FumettoLabel22.Text = "per controllare).";
+            FumettoLabel22.Location = new Point(x, y);
+            FumettoLabel22.Font = labelFont;
+            FumettoLabel22.BackColor = Color.White;
+            //Label terza riga
+            y += FumettoLabel21.Height + 20;
+            FumettoLabel3.Text = "Voglio guadagnare " + "<<Numero da definire>>" + " €.";
+            FumettoLabel3.Location = new Point((int)(0.15 * screen_Width), y);
+            FumettoLabel3.Font = labelFont;
+            FumettoLabel3.BackColor = Color.White;
+            //Label quarta riga
+            y += FumettoLabel3.Height + 20;
+            FumettoLabel4.Text = "Quanto devo far pagare le scarpe? Aiutami tu!";
+            FumettoLabel4.Location = new Point((int)(0.15 * screen_Width), y);
+            FumettoLabel4.Font = labelFont;
+            FumettoLabel4.BackColor = Color.White;
+
+            //PictureBox dello smile
+            y += FumettoLabel4.Height + 20;
+            SmilePictureBox.Image = global::Negozio_di_Viola.Properties.Resources.SmileFelice;
+            SmilePictureBox.Width = (int)(0.05 * screen_Width);
+            SmilePictureBox.Height = SmilePictureBox.Width;
+            SmilePictureBox.Location = new Point((int)(0.15 * screen_Width), y);
+            SmilePictureBox.Visible = true;
+            SmilePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+
+            //Textbox in cui scrivere il guadagno
+            x = SmilePictureBox.Location.X + SmilePictureBox.Width + 20;
+            GuadagnoTextBox.Width = (int)(0.1 * screen_Width);
+            GuadagnoTextBox.Height = (int)(0.05 * screen_Height);
+            GuadagnoTextBox.Location = new Point(x, y);
+            GuadagnoTextBox.Font = labelFont;
         }
 
 
@@ -114,7 +170,8 @@ namespace Negozio_di_Viola
 
         private void CalcolatriceButton_Click(object sender, EventArgs e)
         {
-
+            Calcolatrice calc = new Calcolatrice();
+            calc.ShowDialog();
         }
 
         private void OkButton_Click(object sender, EventArgs e)
@@ -130,7 +187,10 @@ namespace Negozio_di_Viola
 
         private void MenuButton_Click(object sender, EventArgs e)
         {
-
+            Globals.newGame = false;
+            HomePage pagIniz = new HomePage();
+            this.Close();
+            pagIniz.ShowDialog();
         }
 
         private void AvantiButton_Click(object sender, EventArgs e)
@@ -138,6 +198,24 @@ namespace Negozio_di_Viola
 
         }
 
+        private void NegozioButton_Click(object sender, EventArgs e)
+        {
+            Negozio3 neg3 = new Negozio3();
+            neg3.Show();
+            this.Close();
+        }
+
+        private void GuadagnoTextBoxTextChanged(object sender, EventArgs e)
+        {
+            int len = GuadagnoTextBox.Text.Length;
+            string txt = GuadagnoTextBox.Text;
+            for (int i = 0; i < len; i++)
+            {
+                if (!Char.IsNumber(txt[i]) && txt[i] != ',')
+                    GuadagnoTextBox.Text = txt.Replace(txt[i].ToString(), "");
+            }
+        }
         #endregion
+
     }
 }
