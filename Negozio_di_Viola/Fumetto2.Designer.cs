@@ -28,24 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.ViolaPictureBox = new System.Windows.Forms.PictureBox();
             this.NuvolettaPictureBox = new System.Windows.Forms.PictureBox();
             this.MenuButton = new System.Windows.Forms.Button();
             this.AvantiButton = new System.Windows.Forms.Button();
+            this.CalcolatriceButton = new System.Windows.Forms.Button();
+            this.OkButton = new System.Windows.Forms.Button();
+            this.NonSoButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ViolaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuvolettaPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(999, 367);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(280, 47);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Assegnazione Guadagno (PROVVISORIO)";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ViolaPictureBox
             // 
@@ -73,6 +65,7 @@
             this.MenuButton.TabIndex = 3;
             this.MenuButton.Text = "Menu";
             this.MenuButton.UseVisualStyleBackColor = true;
+            this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
             // 
             // AvantiButton
             // 
@@ -82,16 +75,49 @@
             this.AvantiButton.TabIndex = 4;
             this.AvantiButton.Text = "Avanti";
             this.AvantiButton.UseVisualStyleBackColor = true;
+            this.AvantiButton.Click += new System.EventHandler(this.AvantiButton_Click);
+            // 
+            // CalcolatriceButton
+            // 
+            this.CalcolatriceButton.Location = new System.Drawing.Point(156, 413);
+            this.CalcolatriceButton.Name = "CalcolatriceButton";
+            this.CalcolatriceButton.Size = new System.Drawing.Size(75, 23);
+            this.CalcolatriceButton.TabIndex = 5;
+            this.CalcolatriceButton.Text = "Calcolatrice";
+            this.CalcolatriceButton.UseVisualStyleBackColor = true;
+            this.CalcolatriceButton.Click += new System.EventHandler(this.CalcolatriceButton_Click);
+            // 
+            // OkButton
+            // 
+            this.OkButton.Location = new System.Drawing.Point(262, 413);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(75, 23);
+            this.OkButton.TabIndex = 6;
+            this.OkButton.Text = "Ok";
+            this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            // 
+            // NonSoButton
+            // 
+            this.NonSoButton.Location = new System.Drawing.Point(371, 413);
+            this.NonSoButton.Name = "NonSoButton";
+            this.NonSoButton.Size = new System.Drawing.Size(75, 23);
+            this.NonSoButton.TabIndex = 7;
+            this.NonSoButton.Text = "Non lo so";
+            this.NonSoButton.UseVisualStyleBackColor = true;
+            this.NonSoButton.Click += new System.EventHandler(this.NonSoButton_Click);
             // 
             // Fumetto2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1301, 581);
+            this.Controls.Add(this.NonSoButton);
+            this.Controls.Add(this.OkButton);
+            this.Controls.Add(this.CalcolatriceButton);
             this.Controls.Add(this.AvantiButton);
             this.Controls.Add(this.MenuButton);
             this.Controls.Add(this.ViolaPictureBox);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.NuvolettaPictureBox);
             this.Name = "Fumetto2";
             this.Text = "Fumetto2";
@@ -102,11 +128,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox ViolaPictureBox;
         private System.Windows.Forms.PictureBox NuvolettaPictureBox;
         private System.Windows.Forms.Button MenuButton;
         private System.Windows.Forms.Button AvantiButton;
+        private System.Windows.Forms.Button CalcolatriceButton;
+        private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.Button NonSoButton;
     }
 }

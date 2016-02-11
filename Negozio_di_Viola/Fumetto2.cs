@@ -55,6 +55,9 @@ namespace Negozio_di_Viola
             //Colore dei pulsanti
             MenuButton.BackColor = Color.FromName(Globals.BUTTON_BACKGROUND);
             AvantiButton.BackColor = Color.FromName(Globals.BUTTON_BACKGROUND);
+            CalcolatriceButton.BackColor = Color.FromName(Globals.BUTTON_BACKGROUND);
+            OkButton.BackColor = Color.FromName(Globals.BUTTON_BACKGROUND);
+            NonSoButton.BackColor = Color.FromName(Globals.BUTTON_BACKGROUND);
         }
 
         /// <summary>
@@ -64,33 +67,77 @@ namespace Negozio_di_Viola
         {
             int screen_Height = Screen.PrimaryScreen.Bounds.Height;
             int screen_Width = Screen.PrimaryScreen.Bounds.Width;
+            int fontsize = (screen_Width - 125) / 100;
+            Font buttonFont = new Font("Verdana", fontsize, FontStyle.Bold);
             //Picture Box
             // Viola
             ViolaPictureBox.Height = screen_Height;
-            ViolaPictureBox.Width = (int)(0.3 * screen_Width);
-            ViolaPictureBox.Location = new Point((int)(0.7 * screen_Width), 0);
+            ViolaPictureBox.Width = (int)(0.25 * screen_Width);
+            ViolaPictureBox.Location = new Point((int)(0.75 * screen_Width), 0);
             ViolaPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             // Nuvoletta
-            NuvolettaPictureBox.Height = (int)(0.8 * screen_Height);
-            NuvolettaPictureBox.Width = (int)(0.7 * screen_Width);
+            NuvolettaPictureBox.Height = (int)(0.85 * screen_Height);
+            NuvolettaPictureBox.Width = (int)(0.75 * screen_Width);
             NuvolettaPictureBox.Location = new Point(0, 0);
-            NuvolettaPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            NuvolettaPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
 
             //Pulsanti
             //Pulsante menu
             MenuButton.Height = screen_Height / 14;
             MenuButton.Width = screen_Width / 10;
             MenuButton.Location = new Point((int)(0.1 * screen_Width), (int)(0.85 * screen_Height));
+            MenuButton.Font = buttonFont;
             //Pulsante avanti
             AvantiButton.Height = screen_Height / 14;
             AvantiButton.Width = screen_Width / 10;
             AvantiButton.Location = new Point((int)(0.3 * screen_Width), (int)(0.85 * screen_Height));
+            AvantiButton.Font = buttonFont;
+            //Pulsante calcolatrice
+            CalcolatriceButton.Height = screen_Height / 14;
+            CalcolatriceButton.Width = screen_Width / 10;
+            CalcolatriceButton.Location = new Point((int)(0.1 * screen_Width), (int)(0.65 * screen_Height));
+            CalcolatriceButton.Font = buttonFont;
+            //Pulsante avanti
+            OkButton.Height = screen_Height / 14;
+            OkButton.Width = screen_Width / 10;
+            OkButton.Location = new Point((int)(0.25 * screen_Width), (int)(0.65 * screen_Height));
+            OkButton.Font = buttonFont;
+            //Pulsante menu
+            NonSoButton.Height = screen_Height / 14;
+            NonSoButton.Width = screen_Width / 10;
+            NonSoButton.Location = new Point((int)(0.4 * screen_Width), (int)(0.65 * screen_Height));
+            NonSoButton.Font = buttonFont;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        #region Metodi dei click sui pulsanti
+
+        private void CalcolatriceButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OkButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NonSoButton_Click(object sender, EventArgs e)
         {
             AssegnazioneGuadagno ass = new AssegnazioneGuadagno();
             ass.Show();
         }
+
+        private void MenuButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AvantiButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
     }
 }
