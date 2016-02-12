@@ -209,6 +209,7 @@
             this.Controls.Add(this.MenuButton);
             this.Controls.Add(this.ViolaPictureBox);
             this.Controls.Add(this.NuvolettaPictureBox);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Fumetto2";
             this.Text = "Fumetto2";
             ((System.ComponentModel.ISupportInitialize)(this.ViolaPictureBox)).EndInit();
