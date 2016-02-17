@@ -43,6 +43,8 @@
             this.FumettoLabel4 = new System.Windows.Forms.Label();
             this.SmilePictureBox = new System.Windows.Forms.PictureBox();
             this.GuadagnoTextBox = new System.Windows.Forms.TextBox();
+            this.FumettoLabel5 = new System.Windows.Forms.Label();
+            this.Resolution = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ViolaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuvolettaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SmilePictureBox)).BeginInit();
@@ -173,27 +175,47 @@
             // 
             // SmilePictureBox
             // 
-            this.SmilePictureBox.Location = new System.Drawing.Point(15, 184);
+            this.SmilePictureBox.Location = new System.Drawing.Point(13, 223);
             this.SmilePictureBox.Name = "SmilePictureBox";
-            this.SmilePictureBox.Size = new System.Drawing.Size(100, 50);
+            this.SmilePictureBox.Size = new System.Drawing.Size(100, 68);
             this.SmilePictureBox.TabIndex = 14;
             this.SmilePictureBox.TabStop = false;
             // 
             // GuadagnoTextBox
             // 
             this.GuadagnoTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.GuadagnoTextBox.Location = new System.Drawing.Point(135, 184);
+            this.GuadagnoTextBox.Location = new System.Drawing.Point(133, 223);
             this.GuadagnoTextBox.Multiline = true;
             this.GuadagnoTextBox.Name = "GuadagnoTextBox";
             this.GuadagnoTextBox.Size = new System.Drawing.Size(67, 50);
             this.GuadagnoTextBox.TabIndex = 15;
             this.GuadagnoTextBox.TextChanged += new System.EventHandler(this.GuadagnoTextBoxTextChanged);
             // 
+            // FumettoLabel5
+            // 
+            this.FumettoLabel5.AutoSize = true;
+            this.FumettoLabel5.Location = new System.Drawing.Point(12, 180);
+            this.FumettoLabel5.Name = "FumettoLabel5";
+            this.FumettoLabel5.Size = new System.Drawing.Size(73, 17);
+            this.FumettoLabel5.TabIndex = 16;
+            this.FumettoLabel5.Text = "Aiutami tu!";
+            // 
+            // Resolution
+            // 
+            this.Resolution.AutoSize = true;
+            this.Resolution.Location = new System.Drawing.Point(1222, 9);
+            this.Resolution.Name = "Resolution";
+            this.Resolution.Size = new System.Drawing.Size(46, 17);
+            this.Resolution.TabIndex = 17;
+            this.Resolution.Text = "label1";
+            // 
             // Fumetto2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1301, 581);
+            this.Controls.Add(this.Resolution);
+            this.Controls.Add(this.FumettoLabel5);
             this.Controls.Add(this.GuadagnoTextBox);
             this.Controls.Add(this.SmilePictureBox);
             this.Controls.Add(this.FumettoLabel4);
@@ -236,5 +258,7 @@
         private System.Windows.Forms.Label FumettoLabel4;
         private System.Windows.Forms.PictureBox SmilePictureBox;
         private System.Windows.Forms.TextBox GuadagnoTextBox;
+        private System.Windows.Forms.Label FumettoLabel5;
+        private System.Windows.Forms.Label Resolution;
     }
 }

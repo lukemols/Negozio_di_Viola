@@ -25,8 +25,8 @@ namespace Negozio_di_Viola
             guadagno = prezzoFinale - prezzoBase;
             indovinato = false; //Per ora non ha indovinato
 
-            FormBorderStyle = FormBorderStyle.None; //Nascondi la barra della finestra
-            WindowState = FormWindowState.Maximized; // massimizza a schermo intero
+            //FormBorderStyle = FormBorderStyle.None; //Nascondi la barra della finestra
+            //WindowState = FormWindowState.Maximized; // massimizza a schermo intero
             this.AcceptButton = OkButton; //Se l'utente preme INVIO è come se avesse premuto OKBUTTON
             this.CancelButton = MenuButton; //Se l'utente preme ESC è come se avesse premuto MENUBUTTON
 
@@ -81,16 +81,16 @@ namespace Negozio_di_Viola
             //Ottieni altezza e lunghezza
             int screen_Height = this.Height;
             int screen_Width = this.Width;
-            int fontsize = (screen_Width - 125) / 100; //Font lineare con la lunghezza della finestra
+            float fontsize = (screen_Width - 125) / 100; //Font lineare con la lunghezza della finestra
             Font buttonFont = new Font("Verdana", fontsize, FontStyle.Bold);
             //Picture Box
             // Viola
             ViolaPictureBox.Height = screen_Height;
             ViolaPictureBox.Width = (int)(0.25 * screen_Width);
             ViolaPictureBox.Location = new Point((int)(0.75 * screen_Width), 0);
-            ViolaPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            ViolaPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             // Nuvoletta
-            NuvolettaPictureBox.Height = (int)(0.85 * screen_Height);
+            NuvolettaPictureBox.Height = (int)(0.90 * screen_Height);
             NuvolettaPictureBox.Width = (int)(0.75 * screen_Width);
             NuvolettaPictureBox.Location = new Point(0, 0);
             NuvolettaPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -99,27 +99,27 @@ namespace Negozio_di_Viola
             //Pulsante menu
             MenuButton.Height = screen_Height / 14;
             MenuButton.Width = screen_Width / 10;
-            MenuButton.Location = new Point((int)(0.1 * screen_Width), (int)(0.85 * screen_Height));
+            MenuButton.Location = new Point((int)(0.15 * screen_Width), (int)(0.85 * screen_Height));
             MenuButton.Font = buttonFont;
             //Pulsante avanti
             AvantiButton.Height = screen_Height / 14;
             AvantiButton.Width = screen_Width / 10;
-            AvantiButton.Location = new Point((int)(0.3 * screen_Width), (int)(0.85 * screen_Height));
+            AvantiButton.Location = new Point((int)(0.35 * screen_Width), (int)(0.85 * screen_Height));
             AvantiButton.Font = buttonFont;
             //Pulsante calcolatrice
             CalcolatriceButton.Height = screen_Height / 14;
             CalcolatriceButton.Width = screen_Width / 10;
-            CalcolatriceButton.Location = new Point((int)(0.1 * screen_Width), (int)(0.65 * screen_Height));
+            CalcolatriceButton.Location = new Point((int)(0.15 * screen_Width), (int)(0.60 * screen_Height));
             CalcolatriceButton.Font = buttonFont;
             //Pulsante avanti
             OkButton.Height = screen_Height / 14;
             OkButton.Width = screen_Width / 10;
-            OkButton.Location = new Point((int)(0.25 * screen_Width), (int)(0.65 * screen_Height));
+            OkButton.Location = new Point((int)(0.3 * screen_Width), (int)(0.60 * screen_Height));
             OkButton.Font = buttonFont;
             //Pulsante menu
             NonSoButton.Height = screen_Height / 14;
             NonSoButton.Width = screen_Width / 10;
-            NonSoButton.Location = new Point((int)(0.4 * screen_Width), (int)(0.65 * screen_Height));
+            NonSoButton.Location = new Point((int)(0.45 * screen_Width), (int)(0.60 * screen_Height));
             NonSoButton.Font = buttonFont;
 
             //Testo nella nuvoletta
@@ -128,17 +128,17 @@ namespace Negozio_di_Viola
             dallo stesso numero di pixel. Per la spaziatura orizzontale (es seconda riga) si attua un
             procedimento simile.*/
             //Label iniziale
-            int space = screen_Height / 32;
-            fontsize = (screen_Width + 125) / 100;
+            int space = screen_Height / 48;
+            fontsize = (screen_Width + 125) / 115;
             Font labelFont = new Font("Verdana", fontsize, FontStyle.Bold);
             FumettoLabel1.Text = "Hai visto che non ho ancora fissato il prezzo delle scarpe?";
-            FumettoLabel1.Location = new Point((int)(0.15 * screen_Width), (int)(0.15 * screen_Height));
+            FumettoLabel1.Location = new Point((int)(0.13 * screen_Width), (int)(0.2 * screen_Height));
             FumettoLabel1.Font = labelFont;
             FumettoLabel1.BackColor = Color.White;
             //Prima Label seconda riga
             int y = FumettoLabel1.Location.Y + FumettoLabel1.Height + space;
             FumettoLabel21.Text = "(Se non hai visto, torna al";
-            FumettoLabel21.Location = new Point((int)(0.15 * screen_Width), y);
+            FumettoLabel21.Location = new Point((int)(0.13 * screen_Width), y);
             FumettoLabel21.Font = labelFont;
             FumettoLabel21.BackColor = Color.White;
             //Pulsante Negozio
@@ -157,18 +157,24 @@ namespace Negozio_di_Viola
             //Label terza riga
             y += FumettoLabel21.Height + space;
             FumettoLabel3.Text = "Voglio guadagnare " + guadagno.ToString("F2") + "€.";
-            FumettoLabel3.Location = new Point((int)(0.15 * screen_Width), y);
+            FumettoLabel3.Location = new Point((int)(0.13 * screen_Width), y);
             FumettoLabel3.Font = labelFont;
             FumettoLabel3.BackColor = Color.White;
             //Label quarta riga
             y += FumettoLabel3.Height + space;
-            FumettoLabel4.Text = "Se ho pagato le scarpe " + prezzoBase.ToString("F2") + "€ in fabbrica, quanto devo farle pagare? Aiutami tu!";
-            FumettoLabel4.Location = new Point((int)(0.08 * screen_Width), y);
+            FumettoLabel4.Text = "Se ho pagato le scarpe " + prezzoBase.ToString("F2") + "€ in fabbrica, quanto devo farle pagare?";
+            FumettoLabel4.Location = new Point((int)(0.13 * screen_Width), y);
             FumettoLabel4.Font = labelFont;
             FumettoLabel4.BackColor = Color.White;
+            //Label quinta riga
+            y += FumettoLabel4.Height + space;
+            FumettoLabel5.Text = "Aiutami tu!";
+            FumettoLabel5.Location = new Point((int)(0.13 * screen_Width), y);
+            FumettoLabel5.Font = labelFont;
+            FumettoLabel5.BackColor = Color.White;
 
             //PictureBox dello smile
-            y += FumettoLabel4.Height + space;
+            y += FumettoLabel5.Height + space;
             SmilePictureBox.Image = global::Negozio_di_Viola.Properties.Resources.SmileFelice;
             SmilePictureBox.Width = (int)(0.05 * screen_Width);
             SmilePictureBox.Height = SmilePictureBox.Width;
@@ -181,9 +187,16 @@ namespace Negozio_di_Viola
             x = SmilePictureBox.Location.X + SmilePictureBox.Width + 20;
             GuadagnoTextBox.Width = (int)(0.1 * screen_Width);
             GuadagnoTextBox.Height = (int)(0.05 * screen_Height);
+            y += SmilePictureBox.Height / 2 - GuadagnoTextBox.Height / 2;
             GuadagnoTextBox.Location = new Point(x, y);
             GuadagnoTextBox.Font = labelFont;
             GuadagnoTextBox.TextAlign = HorizontalAlignment.Right;
+
+            //LABEL RISOLUZIONE DA TOGLIERE!
+            Resolution.Text = screen_Width + " x " + screen_Height;
+            Resolution.Location = new Point(0, 0);
+            Resolution.Font = labelFont;
+            Resolution.BackColor = Color.White;
         }
 
         /// <summary>
