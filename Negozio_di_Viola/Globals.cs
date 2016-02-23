@@ -26,6 +26,7 @@ namespace Negozio_di_Viola
         public static List<int> casellaP2 = new List<int>();
         public static Image[] soldiImg = new Image[12];
 
+        public static double prezzoConGuadagnoDinamico; /// INSERITO PER LIVELLO 6 - VEDI FUMETTO2 PER DEFINIZIONE
         public static Prodotto scarpe;
         public static int indice_scarpe;
         public static double soldiPrima;        // Soldi prima dell'acquisto in fabbrica.

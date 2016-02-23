@@ -22,13 +22,26 @@ namespace Negozio_di_Viola
             //Ottieni i valori dei prezzi 
             prezzoBase = Globals.scarpe.PrezzoAcquisto;
             prezzoFinale = Globals.scarpe.PrezzoVendita;
+            double delta = prezzoFinale - prezzoBase;
+            Random rnd = new Random();
+            prezzoFinale += (int)(delta * (rnd.NextDouble() * 2 - 1) / 2);
             guadagno = prezzoFinale - prezzoBase;
+            Globals.prezzoConGuadagnoDinamico = guadagno;
+            /* Quello che si vuole fare è definire un guadagno dinamico:
+            a partire dal prezzo finale statico si vuole prendere un nuovo prezzo finale
+            che sia compreso nel range tra gf - 0.5g e gf + 0.5g dove g è il guadagno statico (DELTA).
+            Per fare ciò si prende un valore double casuale (NEXT DOUBLE) tra 0 e 1,
+            lo si porta nel range 0 - 2 con *2, e poi tra -1 e 1 con -1.
+            Si divide per 2 e si ottiene un valore casuale tra -0.5 e +0.5 che moltiplicherà poi DELTA.
+            Il valore casuale -Delta/2 +Delta/2 trasformato in intero viene infine sommato al prezzo finale statico
+            e si ottiene dunque il PREZZO FINALE DINAMICO.
+            Il guadagno dinamico viene poi calcolato come differenza tra i due valori e salvato in globals.
+            */
+
             indovinato = false; //Per ora non ha indovinato
 
-            //FormBorderStyle = FormBorderStyle.None; //Nascondi la barra della finestra
-            //WindowState = FormWindowState.Maximized; // massimizza a schermo intero
-            this.AcceptButton = OkButton; //Se l'utente preme INVIO è come se avesse premuto OKBUTTON
-            this.CancelButton = MenuButton; //Se l'utente preme ESC è come se avesse premuto MENUBUTTON
+            FormBorderStyle = FormBorderStyle.None; //Nascondi la barra della finestra
+            WindowState = FormWindowState.Maximized; // massimizza a schermo intero
 
             CaricaImmagini();
             AdattamentoRisoluzione();
@@ -71,6 +84,20 @@ namespace Negozio_di_Viola
             CalcolatriceButton.BackColor = Color.FromName(Globals.BUTTON_BACKGROUND);
             OkButton.BackColor = Color.FromName(Globals.BUTTON_BACKGROUND);
             NonSoButton.BackColor = Color.FromName(Globals.BUTTON_BACKGROUND);
+
+            MenuButton.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            AvantiButton.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            CalcolatriceButton.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            OkButton.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            NonSoButton.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            FumettoLabel1.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            FumettoLabel21.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            FumettoLabel22.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            FumettoLabel3.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            FumettoLabel4.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            FumettoLabel5.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            NegozioButton.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
+            GuadagnoTextBox.ForeColor = Color.FromName(Globals.BUTTON_TEXT);
         }
 
         /// <summary>
@@ -191,12 +218,14 @@ namespace Negozio_di_Viola
             GuadagnoTextBox.Location = new Point(x, y);
             GuadagnoTextBox.Font = labelFont;
             GuadagnoTextBox.TextAlign = HorizontalAlignment.Right;
+            GuadagnoTextBox.Text = "";
 
             //LABEL RISOLUZIONE DA TOGLIERE!
-            Resolution.Text = screen_Width + " x " + screen_Height;
-            Resolution.Location = new Point(0, 0);
-            Resolution.Font = labelFont;
-            Resolution.BackColor = Color.White;
+            //Resolution.Text = screen_Width + " x " + screen_Height;
+            //Resolution.Location = new Point(0, 0);
+            //Resolution.Font = labelFont;
+            //Resolution.BackColor = Color.White;
+            Resolution.Visible = false;
         }
 
         /// <summary>

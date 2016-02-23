@@ -101,9 +101,14 @@ namespace Negozio_di_Viola
                     switch (Globals.Livello)
                     {
                         case 1:
+                        case 2:
+                        case 3:
+                        case 4:
+                        case 5:
+                        case 6:
 
-                        //  pFabbrica = Convert.ToDouble(Convert.ToInt16(Convert.ToDouble(split_vec[1])));
-                        //  pNegozio = Convert.ToDouble(Convert.ToInt16(Convert.ToDouble(split_vec[2])));
+                            //  pFabbrica = Convert.ToDouble(Convert.ToInt16(Convert.ToDouble(split_vec[1])));
+                            //  pNegozio = Convert.ToDouble(Convert.ToInt16(Convert.ToDouble(split_vec[2])));
                             pFabbrica = Convert.ToDouble((int)(Convert.ToDouble(split_vec[1])));
                             pNegozio = Convert.ToDouble((int)(Convert.ToDouble(split_vec[2])));
 
