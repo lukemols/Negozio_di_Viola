@@ -27,6 +27,7 @@ namespace Negozio_di_Viola
             prezzoFinale += (int)(delta * (rnd.NextDouble() * 2 - 1) / 2);
             guadagno = prezzoFinale - prezzoBase;
             Globals.prezzoConGuadagnoDinamico = guadagno;
+            Globals.scarpe.prezzo_vendita = prezzoFinale;
             /* Quello che si vuole fare è definire un guadagno dinamico:
             a partire dal prezzo finale statico si vuole prendere un nuovo prezzo finale
             che sia compreso nel range tra gf - 0.5g e gf + 0.5g dove g è il guadagno statico (DELTA).
@@ -284,13 +285,13 @@ namespace Negozio_di_Viola
         }
 
         /// <summary>
-        /// Metodo che apre la finestra "AssegnazioneGuadagno" per far ragionare l'utente nel caso non conosca la risposta
+        /// Metodo che apre la finestra "AssegnGuadagno" per far ragionare l'utente nel caso non conosca la risposta
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void NonSoButton_Click(object sender, EventArgs e)
         {
-            AssegnazioneGuadagno ass = new AssegnazioneGuadagno();
+            AssegnGuadagno ass = new AssegnGuadagno();
             ass.Show();
         }
 
