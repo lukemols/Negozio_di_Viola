@@ -22,22 +22,7 @@ namespace Negozio_di_Viola
             //Ottieni i valori dei prezzi 
             prezzoBase = Globals.scarpe.PrezzoAcquisto;
             prezzoFinale = Globals.scarpe.PrezzoVendita;
-            double delta = prezzoFinale - prezzoBase;
-            Random rnd = new Random();
-            prezzoFinale += (int)(delta * (rnd.NextDouble() * 2 - 1) / 2);
-            guadagno = prezzoFinale - prezzoBase;
-            Globals.prezzoConGuadagnoDinamico = guadagno;
-            Globals.scarpe.prezzo_vendita = prezzoFinale;
-            /* Quello che si vuole fare è definire un guadagno dinamico:
-            a partire dal prezzo finale statico si vuole prendere un nuovo prezzo finale
-            che sia compreso nel range tra gf - 0.5g e gf + 0.5g dove g è il guadagno statico (DELTA).
-            Per fare ciò si prende un valore double casuale (NEXT DOUBLE) tra 0 e 1,
-            lo si porta nel range 0 - 2 con *2, e poi tra -1 e 1 con -1.
-            Si divide per 2 e si ottiene un valore casuale tra -0.5 e +0.5 che moltiplicherà poi DELTA.
-            Il valore casuale -Delta/2 +Delta/2 trasformato in intero viene infine sommato al prezzo finale statico
-            e si ottiene dunque il PREZZO FINALE DINAMICO.
-            Il guadagno dinamico viene poi calcolato come differenza tra i due valori e salvato in globals.
-            */
+            guadagno = prezzoFinale - prezzoBase;            
 
             indovinato = false; //Per ora non ha indovinato
 
@@ -318,11 +303,8 @@ namespace Negozio_di_Viola
             //Vai avanti solo se l'utente ha indovinato
             if (indovinato)
             {
-                Globals.statoGioco = 3;
-                Negozio2.enabledClick = true;
-                Globals.visualizzaDialogo = false;
-                Negozio2 negozio = new Negozio2();
-                negozio.ShowDialog();
+                Fumetto fumettoFine = new Fumetto(100);
+                fumettoFine.ShowDialog();
                 this.Close();
             }
         }

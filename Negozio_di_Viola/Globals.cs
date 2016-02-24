@@ -433,6 +433,26 @@ namespace Negozio_di_Viola
                         if ((i != Globals.indice_scarpe) && (Globals.listProdottiNegozio[4 * i].PrezzoAcquisto < prezzo_min2))
                             prezzo_min2 = Globals.listProdottiNegozio[4 * i].PrezzoAcquisto;
 
+                    /*SE E' IL LIVELLO 6 ALLORA DEFINIAMO UN GUADAGNO DINAMICO!*/
+                    if(Globals.Livello == 6)
+                    {
+                        double delta = scarpe.PrezzoVendita - scarpe.PrezzoAcquisto;
+                        Random rnd = new Random();
+                        scarpe.prezzo_vendita = (int)(scarpe.prezzo_vendita + delta * ((rnd.NextDouble() * 2f - 1f) / 2));
+                        Globals.prezzoConGuadagnoDinamico = scarpe.PrezzoVendita - scarpe.PrezzoAcquisto;
+                        /* Quello che si vuole fare è definire un guadagno dinamico:
+                        a partire dal prezzo finale statico si vuole prendere un nuovo prezzo finale
+                        che sia compreso nel range tra gf - 0.5g e gf + 0.5g dove g è il guadagno statico (DELTA).
+                        Per fare ciò si prende un valore double casuale (NEXT DOUBLE) tra 0 e 1,
+                        lo si porta nel range 0 - 2 con *2, e poi tra -1 e 1 con -1.
+                        Si divide per 2 e si ottiene un valore casuale tra -0.5 e +0.5 che moltiplicherà poi DELTA.
+                        Il valore casuale -Delta/2 +Delta/2 trasformato in intero viene infine sommato al prezzo finale statico
+                        e si ottiene dunque il PREZZO FINALE DINAMICO.
+                        Il guadagno dinamico viene poi calcolato come differenza tra i due valori.
+                        */
+                    }
+
+
                     prezzo = Globals.global_rnd.Next((int)prezzo_min, (int)(prezzo_min2 - 1));
 
                     Globals.nAcquisto = 0;
