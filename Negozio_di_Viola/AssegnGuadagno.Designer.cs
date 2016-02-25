@@ -109,6 +109,7 @@
             this.InsNumero = new System.Windows.Forms.Button();
             this.buttonCalcolatrice = new System.Windows.Forms.Button();
             this.sicuro = new System.Windows.Forms.Button();
+            this.sicuro2 = new System.Windows.Forms.Button();
             this.porta_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.porta_16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.porta_15)).BeginInit();
@@ -1406,12 +1407,31 @@
             this.sicuro.UseVisualStyleBackColor = false;
             this.sicuro.Visible = false;
             // 
+            // sicuro2
+            // 
+            this.sicuro2.BackColor = System.Drawing.Color.Transparent;
+            this.sicuro2.FlatAppearance.BorderSize = 0;
+            this.sicuro2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sicuro2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sicuro2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sicuro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.sicuro2.ForeColor = System.Drawing.Color.White;
+            this.sicuro2.Location = new System.Drawing.Point(160, 655);
+            this.sicuro2.Name = "sicuro2";
+            this.sicuro2.Size = new System.Drawing.Size(358, 32);
+            this.sicuro2.TabIndex = 120;
+            this.sicuro2.Text = "Sicuro che sia la casella giusta?";
+            this.sicuro2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.sicuro2.UseVisualStyleBackColor = false;
+            this.sicuro2.Visible = false;
+            // 
             // AssegnGuadagno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1370, 772);
+            this.Controls.Add(this.sicuro2);
             this.Controls.Add(this.sicuro);
             this.Controls.Add(this.buttonCalcolatrice);
             this.Controls.Add(this.InsNumero);
@@ -1563,6 +1583,7 @@
         private System.Windows.Forms.Button InsNumero;
         private System.Windows.Forms.Button buttonCalcolatrice;
         private System.Windows.Forms.Button sicuro;
+        private System.Windows.Forms.Button sicuro2;
 
 
     }

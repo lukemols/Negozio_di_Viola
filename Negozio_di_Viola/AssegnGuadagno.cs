@@ -28,14 +28,9 @@ namespace Negozio_di_Viola
 
         static int porta_start = 0; // Porta da cui inizia il trascinamento.
 
-        double widthFactor;
-        double heightFactor;
-
         //Costruttore form.
         public AssegnGuadagno()
         {
-            //Globals.soldiDopoVendita = Globals.soldiDopo + Globals.scarpe.PrezzoVendita;
-            //Globals.soldiPrima = Globals.GetSoldiPortafoglio();
 
             array_guadagno = assegnazione_array_guadagno(Globals.prezzoConGuadagnoDinamico);
             array_spesa_fabbrica = Differeza_fasi_12();
@@ -51,8 +46,8 @@ namespace Negozio_di_Viola
             int screen_Height = Screen.PrimaryScreen.Bounds.Height;
             int screen_Width = Screen.PrimaryScreen.Bounds.Width;
 
-            widthFactor = (double)screen_Width / this.Size.Width;
-            heightFactor = (double)screen_Height / this.Size.Height;
+            double widthFactor = (double)screen_Width / this.Size.Width;
+            double heightFactor = (double)screen_Height / this.Size.Height;
 
             this.ok_1.Width = (int)(ok_1.Width * widthFactor);
             this.ok_1.Height = (int)(ok_1.Height * heightFactor);
@@ -86,6 +81,16 @@ namespace Negozio_di_Viola
             this.sicuro.Width = (int)(sicuro.Width * widthFactor);
             this.sicuro.Height = (int)(sicuro.Height * heightFactor);
             this.sicuro.Font = new Font("Verdana", (float)widthFactor * 14F, FontStyle.Bold);
+            this.sicuro.Location = new Point((int)((porta_3.Location.X + 2) * widthFactor), (int)((porta_3.Location.Y + porta_3.Height - sicuro.Height - 2) * heightFactor));
+            this.sicuro.BackColor = Color.Tomato;
+            this.sicuro.FlatAppearance.MouseOverBackColor = Color.Tomato;
+
+            this.sicuro2.Width = (int)(sicuro2.Width * widthFactor);
+            this.sicuro2.Height = (int)(sicuro2.Height * heightFactor);
+            this.sicuro2.Font = new Font("Verdana", (float)widthFactor * 14F, FontStyle.Bold);
+            this.sicuro2.Location = new Point((int)((porta_4.Location.X + 2) * widthFactor), (int)((porta_4.Location.Y + porta_4.Height - sicuro2.Height - 2) * heightFactor));
+            this.sicuro2.BackColor = Color.Lime;
+            this.sicuro2.FlatAppearance.MouseOverBackColor = Color.Lime;
 
             this.buttonMenu.Width = (int)(buttonMenu.Width * widthFactor);
             this.buttonMenu.Height = (int)(buttonMenu.Height * heightFactor);
@@ -963,6 +968,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = false;
             porta_2.AllowDrop = false;
             porta_3.AllowDrop = true;
@@ -978,6 +988,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = false;
@@ -998,6 +1013,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = false;
             porta_2.AllowDrop = false;
             porta_3.AllowDrop = true;
@@ -1013,6 +1033,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = false;
@@ -1032,6 +1057,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = false;
             porta_2.AllowDrop = false;
             porta_3.AllowDrop = true;
@@ -1047,6 +1077,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = false;
@@ -1068,6 +1103,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = false;
             porta_2.AllowDrop = false;
             porta_3.AllowDrop = true;
@@ -1083,6 +1123,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = false;
@@ -1103,6 +1148,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = false;
             porta_2.AllowDrop = false;
             porta_3.AllowDrop = true;
@@ -1118,6 +1168,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = false;
@@ -1137,6 +1192,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = false;
             porta_2.AllowDrop = false;
             porta_3.AllowDrop = true;
@@ -1152,6 +1212,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = false;
@@ -1174,6 +1239,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = true;
             porta_2.AllowDrop = true;
             porta_3.AllowDrop = false;
@@ -1189,6 +1259,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = true;
@@ -1209,6 +1284,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = true;
             porta_2.AllowDrop = true;
             porta_3.AllowDrop = false;
@@ -1224,6 +1304,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = true;
@@ -1243,6 +1328,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = true;
             porta_2.AllowDrop = true;
             porta_3.AllowDrop = false;
@@ -1258,6 +1348,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = true;
@@ -1280,6 +1375,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = true;
             porta_2.AllowDrop = true;
             porta_3.AllowDrop = false;
@@ -1295,6 +1395,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = true;
@@ -1315,6 +1420,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = true;
             porta_2.AllowDrop = true;
             porta_3.AllowDrop = false;
@@ -1330,6 +1440,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = true;
@@ -1349,6 +1464,11 @@ namespace Negozio_di_Viola
                 this.sicuro.Visible = false;
             }
 
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
+            }
+
             porta_1.AllowDrop = true;
             porta_2.AllowDrop = true;
             porta_3.AllowDrop = false;
@@ -1364,6 +1484,11 @@ namespace Negozio_di_Viola
             if (this.sicuro.Visible == true)
             {
                 this.sicuro.Visible = false;
+            }
+
+            if (this.sicuro2.Visible == true)
+            {
+                this.sicuro2.Visible = false;
             }
 
             porta_1.AllowDrop = true;
@@ -1879,9 +2004,6 @@ namespace Negozio_di_Viola
             if (porta_start == 2 && this.sicuro.Visible == false)
             {
                 porta_3.AllowDrop = false;
-                this.sicuro.Location = new Point((int)((porta_3.Location.X + 2) * widthFactor), (int)((porta_3.Location.Y + porta_3.Height - sicuro.Height) * heightFactor));
-                this.sicuro.BackColor = Color.Tomato;
-                this.sicuro.FlatAppearance.MouseOverBackColor = Color.Tomato;
                 this.sicuro.Visible = true;
             }
 
@@ -1893,13 +2015,10 @@ namespace Negozio_di_Viola
 
         private void porta_4_DragOver(object sender, DragEventArgs e)
         {
-            if (porta_start == 1 && this.sicuro.Visible == false)
+            if (porta_start == 1 && this.sicuro2.Visible == false)
             {
                 porta_4.AllowDrop = false;
-                this.sicuro.Location = new Point((int)((porta_4.Location.X + 4) * widthFactor), (int)((porta_4.Location.Y + porta_4.Height - sicuro.Height) * heightFactor));
-                this.sicuro.BackColor = Color.Lime;
-                this.sicuro.FlatAppearance.MouseOverBackColor = Color.Lime;
-                this.sicuro.Visible = true;
+                this.sicuro2.Visible = true;
             }
 
             if (e.Data.GetDataPresent(DataFormats.Text))
@@ -1948,9 +2067,9 @@ namespace Negozio_di_Viola
         private void porta_3_DragDrop(object sender, DragEventArgs e)
         {
 
-            if (this.sicuro.Visible == true)
+            if (this.sicuro2.Visible == true)
             {
-                this.sicuro.Visible = false;
+                this.sicuro2.Visible = false;
             }
 
             string testo = e.Data.GetData(DataFormats.Text).ToString();
