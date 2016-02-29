@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ViolaPictureBox = new System.Windows.Forms.PictureBox();
             this.NuvolettaPictureBox = new System.Windows.Forms.PictureBox();
             this.MenuButton = new System.Windows.Forms.Button();
@@ -39,15 +40,20 @@
             this.FumettoLabel21 = new System.Windows.Forms.Label();
             this.FumettoLabel22 = new System.Windows.Forms.Label();
             this.NegozioButton = new System.Windows.Forms.Button();
-            this.FumettoLabel3 = new System.Windows.Forms.Label();
-            this.FumettoLabel4 = new System.Windows.Forms.Label();
+            this.FumettoLabel31 = new System.Windows.Forms.Label();
+            this.FumettoLabel41 = new System.Windows.Forms.Label();
             this.SmilePictureBox = new System.Windows.Forms.PictureBox();
             this.GuadagnoTextBox = new System.Windows.Forms.TextBox();
             this.FumettoLabel5 = new System.Windows.Forms.Label();
-            this.Resolution = new System.Windows.Forms.Label();
+            this.FumettoLabel32 = new System.Windows.Forms.Label();
+            this.FumettoLabel42 = new System.Windows.Forms.Label();
+            this.FumettoLabel43 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.FumettoLabel33 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ViolaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuvolettaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SmilePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // ViolaPictureBox
@@ -155,23 +161,23 @@
             this.NegozioButton.UseVisualStyleBackColor = true;
             this.NegozioButton.Click += new System.EventHandler(this.NegozioButton_Click);
             // 
-            // FumettoLabel3
+            // FumettoLabel31
             // 
-            this.FumettoLabel3.AutoSize = true;
-            this.FumettoLabel3.Location = new System.Drawing.Point(12, 112);
-            this.FumettoLabel3.Name = "FumettoLabel3";
-            this.FumettoLabel3.Size = new System.Drawing.Size(128, 17);
-            this.FumettoLabel3.TabIndex = 12;
-            this.FumettoLabel3.Text = "Voglio guadagnare";
+            this.FumettoLabel31.AutoSize = true;
+            this.FumettoLabel31.Location = new System.Drawing.Point(12, 112);
+            this.FumettoLabel31.Name = "FumettoLabel31";
+            this.FumettoLabel31.Size = new System.Drawing.Size(128, 17);
+            this.FumettoLabel31.TabIndex = 12;
+            this.FumettoLabel31.Text = "Voglio guadagnare";
             // 
-            // FumettoLabel4
+            // FumettoLabel41
             // 
-            this.FumettoLabel4.AutoSize = true;
-            this.FumettoLabel4.Location = new System.Drawing.Point(12, 147);
-            this.FumettoLabel4.Name = "FumettoLabel4";
-            this.FumettoLabel4.Size = new System.Drawing.Size(167, 17);
-            this.FumettoLabel4.TabIndex = 13;
-            this.FumettoLabel4.Text = "Quanto devo mettere per";
+            this.FumettoLabel41.AutoSize = true;
+            this.FumettoLabel41.Location = new System.Drawing.Point(12, 147);
+            this.FumettoLabel41.Name = "FumettoLabel41";
+            this.FumettoLabel41.Size = new System.Drawing.Size(167, 17);
+            this.FumettoLabel41.TabIndex = 13;
+            this.FumettoLabel41.Text = "Quanto devo mettere per";
             // 
             // SmilePictureBox
             // 
@@ -185,9 +191,8 @@
             // 
             this.GuadagnoTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.GuadagnoTextBox.Location = new System.Drawing.Point(133, 223);
-            this.GuadagnoTextBox.Multiline = true;
             this.GuadagnoTextBox.Name = "GuadagnoTextBox";
-            this.GuadagnoTextBox.Size = new System.Drawing.Size(67, 50);
+            this.GuadagnoTextBox.Size = new System.Drawing.Size(67, 22);
             this.GuadagnoTextBox.TabIndex = 15;
             this.GuadagnoTextBox.TextChanged += new System.EventHandler(this.GuadagnoTextBoxTextChanged);
             // 
@@ -200,26 +205,60 @@
             this.FumettoLabel5.TabIndex = 16;
             this.FumettoLabel5.Text = "Aiutami tu!";
             // 
-            // Resolution
+            // FumettoLabel32
             // 
-            this.Resolution.AutoSize = true;
-            this.Resolution.Location = new System.Drawing.Point(1222, 9);
-            this.Resolution.Name = "Resolution";
-            this.Resolution.Size = new System.Drawing.Size(46, 17);
-            this.Resolution.TabIndex = 17;
-            this.Resolution.Text = "label1";
+            this.FumettoLabel32.AutoSize = true;
+            this.FumettoLabel32.Location = new System.Drawing.Point(153, 112);
+            this.FumettoLabel32.Name = "FumettoLabel32";
+            this.FumettoLabel32.Size = new System.Drawing.Size(32, 17);
+            this.FumettoLabel32.TabIndex = 18;
+            this.FumettoLabel32.Text = "10€";
+            // 
+            // FumettoLabel42
+            // 
+            this.FumettoLabel42.AutoSize = true;
+            this.FumettoLabel42.Location = new System.Drawing.Point(206, 147);
+            this.FumettoLabel42.Name = "FumettoLabel42";
+            this.FumettoLabel42.Size = new System.Drawing.Size(32, 17);
+            this.FumettoLabel42.TabIndex = 19;
+            this.FumettoLabel42.Text = "20€";
+            // 
+            // FumettoLabel43
+            // 
+            this.FumettoLabel43.AutoSize = true;
+            this.FumettoLabel43.Location = new System.Drawing.Point(259, 147);
+            this.FumettoLabel43.Name = "FumettoLabel43";
+            this.FumettoLabel43.Size = new System.Drawing.Size(72, 17);
+            this.FumettoLabel43.TabIndex = 20;
+            this.FumettoLabel43.Text = "al cliente?";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // FumettoLabel33
+            // 
+            this.FumettoLabel33.AutoSize = true;
+            this.FumettoLabel33.Location = new System.Drawing.Point(206, 112);
+            this.FumettoLabel33.Name = "FumettoLabel33";
+            this.FumettoLabel33.Size = new System.Drawing.Size(20, 17);
+            this.FumettoLabel33.TabIndex = 21;
+            this.FumettoLabel33.Text = "€.";
             // 
             // Fumetto2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1301, 581);
-            this.Controls.Add(this.Resolution);
+            this.ClientSize = new System.Drawing.Size(1301, 753);
+            this.Controls.Add(this.FumettoLabel33);
+            this.Controls.Add(this.FumettoLabel43);
+            this.Controls.Add(this.FumettoLabel42);
+            this.Controls.Add(this.FumettoLabel32);
             this.Controls.Add(this.FumettoLabel5);
             this.Controls.Add(this.GuadagnoTextBox);
             this.Controls.Add(this.SmilePictureBox);
-            this.Controls.Add(this.FumettoLabel4);
-            this.Controls.Add(this.FumettoLabel3);
+            this.Controls.Add(this.FumettoLabel41);
+            this.Controls.Add(this.FumettoLabel31);
             this.Controls.Add(this.NegozioButton);
             this.Controls.Add(this.FumettoLabel22);
             this.Controls.Add(this.FumettoLabel21);
@@ -231,12 +270,13 @@
             this.Controls.Add(this.MenuButton);
             this.Controls.Add(this.ViolaPictureBox);
             this.Controls.Add(this.NuvolettaPictureBox);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(800, 800);
             this.Name = "Fumetto2";
             this.Text = "Fumetto2";
             ((System.ComponentModel.ISupportInitialize)(this.ViolaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuvolettaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SmilePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,11 +294,15 @@
         private System.Windows.Forms.Label FumettoLabel21;
         private System.Windows.Forms.Label FumettoLabel22;
         private System.Windows.Forms.Button NegozioButton;
-        private System.Windows.Forms.Label FumettoLabel3;
-        private System.Windows.Forms.Label FumettoLabel4;
+        private System.Windows.Forms.Label FumettoLabel31;
+        private System.Windows.Forms.Label FumettoLabel41;
         private System.Windows.Forms.PictureBox SmilePictureBox;
         private System.Windows.Forms.TextBox GuadagnoTextBox;
         private System.Windows.Forms.Label FumettoLabel5;
-        private System.Windows.Forms.Label Resolution;
+        private System.Windows.Forms.Label FumettoLabel32;
+        private System.Windows.Forms.Label FumettoLabel42;
+        private System.Windows.Forms.Label FumettoLabel43;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label FumettoLabel33;
     }
 }
