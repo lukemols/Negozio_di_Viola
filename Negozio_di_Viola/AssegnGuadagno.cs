@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using System.Threading;
+
 namespace Negozio_di_Viola
 {
     public partial class AssegnGuadagno : Form
     {
         HomePage home;
         int[] array_guadagno;
-        Fumetto fumettoFine;
+        Fumetto2 fumetto2;
         int[] array_spesa_fabbrica; // pFase1 - pFase2.
 
         /*Array con contatori quantità banconote [50e, 20e, 10e, 5e, 2e, 1e]*/
@@ -27,6 +29,12 @@ namespace Negozio_di_Viola
         static int[] inizio_porta_2 = new int[6];    // Array che conserva la situazione di val_porta_2 anche dopo che si fanno degli spostamenti di banconote. Utile per AllowDrop.
 
         static int porta_start = 0; // Porta da cui inizia il trascinamento.
+
+        double widthFactor;
+        Point location_start;
+        Point location_start_3;
+        Point location_start_4;
+        Point location_target;
 
         //Costruttore form.
         public AssegnGuadagno()
@@ -46,7 +54,7 @@ namespace Negozio_di_Viola
             int screen_Height = Screen.PrimaryScreen.Bounds.Height;
             int screen_Width = Screen.PrimaryScreen.Bounds.Width;
 
-            double widthFactor = (double)screen_Width / this.Size.Width;
+                   widthFactor = (double)screen_Width / this.Size.Width;
             double heightFactor = (double)screen_Height / this.Size.Height;
 
             this.ok_1.Width = (int)(ok_1.Width * widthFactor);
@@ -115,6 +123,10 @@ namespace Negozio_di_Viola
             this.smile.Width = (int)(smile.Width * widthFactor);
             this.smile.Height = (int)(smile.Height * heightFactor);
             this.smile.Location = new Point((int)(smile.Location.X * widthFactor), (int)(smile.Location.Y * heightFactor));
+
+            this.smile2.Width = (int)(smile2.Width * widthFactor);
+            this.smile2.Height = (int)(smile2.Height * heightFactor);
+            this.smile2.Location = new Point((int)(smile2.Location.X * widthFactor), (int)(smile2.Location.Y * heightFactor));
 
             this.nosmile.Width = (int)(nosmile.Width * widthFactor);
             this.nosmile.Height = (int)(nosmile.Height * heightFactor);
@@ -832,10 +844,10 @@ namespace Negozio_di_Viola
             porta_56.Visible = false;
             label_56.Visible = false;
 
-            //Da modificare
+            
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NonSo"; //?
-            this.Text = "Portafoglio-cassa di Viola"; //?
+            this.Name = "AssegnGuadagno";
+            /*this.Text = "Portafoglio-cassa di Viola";*/
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
             this.ResumeLayout(false);
@@ -845,8 +857,8 @@ namespace Negozio_di_Viola
         //Per uscire dalla prova
         private void buttonEsci_Click(object sender, EventArgs e)
         {
-            fumettoFine = new Fumetto(100);
-            fumettoFine.ShowDialog();
+            fumetto2 = new Fumetto2();
+            fumetto2.ShowDialog();
         }
 
         //Compotamento di ok_1.
@@ -855,12 +867,16 @@ namespace Negozio_di_Viola
             if (Val_array_spesa_fabbrica() == Val_porta_3() && Globals.prezzoConGuadagnoDinamico == Val_porta_4())
             {
                 this.ok_1.Visible = false;
-                this.porta_3.Visible = false;
-                this.porta_4.Visible = false;
                 this.nosmile.Visible = false;
                 this.fase_3.Visible = false;
+                muovi_porta_3_4();
+                mostra_porta_5();
+                
+                this.smile2.Visible = true;
+                
+                
                 this.ok_2.Visible = true;
-                this.porta_5.Visible = true;
+                
                 this.domanda.Visible = true;
                 this.risposta.Visible = true;
 
@@ -895,7 +911,7 @@ namespace Negozio_di_Viola
                     this.risposta.Enabled = false;
                     this.nosmile.Visible = false;
                     this.buttonEsci.Visible = true;
-                    this.ok_2.Visible = false;
+                    this.ok_2.BackColor = Color.FromName(Globals.BUTTON_BACKGROUND_OK);
                 }
                 else
                 {
@@ -2258,7 +2274,77 @@ namespace Negozio_di_Viola
 
         }
 
+        //Funzione che sposta le porte 3 e 4 e le fa dissolvere dopo aver risposto giusto.
+        public void muovi_porta_3_4()
+        {
+            location_start_3 = porta_3.Location;
+            location_start_4 = porta_4.Location;
+            location_target = porta_5.Location;
+            int alpha_start = 255;
 
+            this.porta_3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.porta_4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+
+            while (location_start_3.X < location_target.X && location_start_4.X > location_target.X)
+            {
+
+
+                location_start_3.X = (int)(location_start_3.X + 5 /* * Globals.speedFactor1 * widthFactor*/);
+                location_start_4.X = (int)(location_start_4.X - 5 /* * Globals.speedFactor1 * widthFactor*/);
+                alpha_start = alpha_start - 5;
+                this.porta_3.Location = location_start_3;
+                
+                this.porta_4.Location = location_start_4;
+                
+
+                if(alpha_start >= 3)
+                {
+                    this.porta_3.BackColor = Color.FromArgb(alpha_start, Color.Tomato);
+                    this.porta_4.BackColor = Color.FromArgb(alpha_start, Color.Lime);
+                }
+
+                foreach(Control c in porta_3.Controls)
+                {
+                    location_start = c.Location;                       /*Sposta le banconote con il panel*/
+                    location_start.X = (int)(location_start.X + 0.1);
+                    c.Location = location_start;
+                    //c.Visible = false;                                   /*Nasconde le banconote del panel*/
+                }
+
+                foreach (Control c in porta_4.Controls)
+                {
+                    location_start = c.Location;
+                    location_start.X = (int)(location_start.X - 0.1);
+                    c.Location = location_start;
+                    //c.Visible = false;
+                }
+                //this.pictureBox1.BringToFront();
+                Thread.Sleep(5);
+                ((Form)this).Update();
+
+            }
+            this.porta_3.Visible = false;
+            this.porta_4.Visible = false;
+
+        }
+
+        //Mostra la porta 5 con un effetto dissolvenza
+        public void mostra_porta_5()
+        {
+            int alpha_start = 0;
+            this.porta_5.Visible = true;
+
+            while(alpha_start < 255)
+            {
+                alpha_start = alpha_start + 15;
+                this.porta_5.BackColor = Color.FromArgb(alpha_start, Color.White);
+
+                Thread.Sleep(5);
+                ((Form)this).Update();
+            }
+
+            this.porta_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        }
 
 
     }

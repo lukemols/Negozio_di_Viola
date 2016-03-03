@@ -110,6 +110,7 @@
             this.buttonCalcolatrice = new System.Windows.Forms.Button();
             this.sicuro = new System.Windows.Forms.Button();
             this.sicuro2 = new System.Windows.Forms.Button();
+            this.smile2 = new System.Windows.Forms.PictureBox();
             this.porta_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.porta_16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.porta_15)).BeginInit();
@@ -148,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nosmile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbViola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smile2)).BeginInit();
             this.SuspendLayout();
             // 
             // porta_1
@@ -165,7 +167,7 @@
             this.porta_1.Controls.Add(this.porta_13);
             this.porta_1.Controls.Add(this.porta_12);
             this.porta_1.Controls.Add(this.porta_11);
-            this.porta_1.Location = new System.Drawing.Point(463, 93);
+            this.porta_1.Location = new System.Drawing.Point(356, 93);
             this.porta_1.Name = "porta_1";
             this.porta_1.Size = new System.Drawing.Size(578, 103);
             this.porta_1.TabIndex = 41;
@@ -366,7 +368,7 @@
             this.porta_2.Controls.Add(this.porta_24);
             this.porta_2.Controls.Add(this.porta_25);
             this.porta_2.Controls.Add(this.porta_26);
-            this.porta_2.Location = new System.Drawing.Point(463, 221);
+            this.porta_2.Location = new System.Drawing.Point(356, 221);
             this.porta_2.Name = "porta_2";
             this.porta_2.Size = new System.Drawing.Size(578, 111);
             this.porta_2.TabIndex = 42;
@@ -577,7 +579,7 @@
             this.fase_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fase_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.fase_1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.fase_1.Location = new System.Drawing.Point(12, 93);
+            this.fase_1.Location = new System.Drawing.Point(3, 93);
             this.fase_1.Name = "fase_1";
             this.fase_1.Size = new System.Drawing.Size(434, 103);
             this.fase_1.TabIndex = 38;
@@ -594,7 +596,7 @@
             this.fase_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fase_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.fase_2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.fase_2.Location = new System.Drawing.Point(12, 221);
+            this.fase_2.Location = new System.Drawing.Point(3, 221);
             this.fase_2.Name = "fase_2";
             this.fase_2.Size = new System.Drawing.Size(434, 111);
             this.fase_2.TabIndex = 39;
@@ -618,7 +620,7 @@
             this.porta_3.Controls.Add(this.porta_34);
             this.porta_3.Controls.Add(this.porta_35);
             this.porta_3.Controls.Add(this.porta_36);
-            this.porta_3.Location = new System.Drawing.Point(128, 462);
+            this.porta_3.Location = new System.Drawing.Point(76, 462);
             this.porta_3.Name = "porta_3";
             this.porta_3.Size = new System.Drawing.Size(578, 111);
             this.porta_3.TabIndex = 44;
@@ -807,8 +809,7 @@
             // 
             // porta_5
             // 
-            this.porta_5.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.porta_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.porta_5.BackColor = System.Drawing.Color.Transparent;
             this.porta_5.Controls.Add(this.label_56);
             this.porta_5.Controls.Add(this.label_55);
             this.porta_5.Controls.Add(this.label_54);
@@ -821,7 +822,7 @@
             this.porta_5.Controls.Add(this.porta_54);
             this.porta_5.Controls.Add(this.porta_55);
             this.porta_5.Controls.Add(this.porta_56);
-            this.porta_5.Location = new System.Drawing.Point(463, 355);
+            this.porta_5.Location = new System.Drawing.Point(356, 462);
             this.porta_5.Name = "porta_5";
             this.porta_5.Size = new System.Drawing.Size(578, 111);
             this.porta_5.TabIndex = 114;
@@ -1017,7 +1018,7 @@
             this.fase_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.fase_3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.fase_3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.fase_3.Location = new System.Drawing.Point(411, 347);
+            this.fase_3.Location = new System.Drawing.Point(357, 347);
             this.fase_3.Name = "fase_3";
             this.fase_3.Size = new System.Drawing.Size(776, 100);
             this.fase_3.TabIndex = 43;
@@ -1055,7 +1056,7 @@
             this.porta_4.Controls.Add(this.porta_44);
             this.porta_4.Controls.Add(this.porta_45);
             this.porta_4.Controls.Add(this.porta_46);
-            this.porta_4.Location = new System.Drawing.Point(708, 462);
+            this.porta_4.Location = new System.Drawing.Point(660, 462);
             this.porta_4.Name = "porta_4";
             this.porta_4.Size = new System.Drawing.Size(572, 111);
             this.porta_4.TabIndex = 53;
@@ -1257,7 +1258,7 @@
             this.domanda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.domanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.domanda.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.domanda.Location = new System.Drawing.Point(139, 579);
+            this.domanda.Location = new System.Drawing.Point(128, 624);
             this.domanda.Name = "domanda";
             this.domanda.Size = new System.Drawing.Size(556, 70);
             this.domanda.TabIndex = 47;
@@ -1273,7 +1274,7 @@
             this.risposta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.risposta.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.risposta.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.risposta.Location = new System.Drawing.Point(680, 585);
+            this.risposta.Location = new System.Drawing.Point(680, 636);
             this.risposta.Multiline = true;
             this.risposta.Name = "risposta";
             this.risposta.Size = new System.Drawing.Size(162, 51);
@@ -1288,7 +1289,7 @@
             this.ok_2.BackColor = System.Drawing.Color.Yellow;
             this.ok_2.Font = new System.Drawing.Font("Verdana", 12F);
             this.ok_2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.ok_2.Location = new System.Drawing.Point(876, 585);
+            this.ok_2.Location = new System.Drawing.Point(884, 636);
             this.ok_2.Name = "ok_2";
             this.ok_2.Size = new System.Drawing.Size(70, 51);
             this.ok_2.TabIndex = 101;
@@ -1313,7 +1314,7 @@
             // nosmile
             // 
             this.nosmile.Image = global::Negozio_di_Viola.Properties.Resources.SmileTriste;
-            this.nosmile.Location = new System.Drawing.Point(961, 585);
+            this.nosmile.Location = new System.Drawing.Point(961, 618);
             this.nosmile.Margin = new System.Windows.Forms.Padding(4);
             this.nosmile.Name = "nosmile";
             this.nosmile.Size = new System.Drawing.Size(80, 80);
@@ -1328,7 +1329,7 @@
             this.ok_1.BackColor = System.Drawing.Color.Yellow;
             this.ok_1.Font = new System.Drawing.Font("Verdana", 18F);
             this.ok_1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.ok_1.Location = new System.Drawing.Point(671, 597);
+            this.ok_1.Location = new System.Drawing.Point(1238, 473);
             this.ok_1.Name = "ok_1";
             this.ok_1.Size = new System.Drawing.Size(104, 77);
             this.ok_1.TabIndex = 113;
@@ -1339,7 +1340,7 @@
             // smile
             // 
             this.smile.Image = global::Negozio_di_Viola.Properties.Resources.SmileFelice;
-            this.smile.Location = new System.Drawing.Point(961, 585);
+            this.smile.Location = new System.Drawing.Point(961, 618);
             this.smile.Margin = new System.Windows.Forms.Padding(4);
             this.smile.Name = "smile";
             this.smile.Size = new System.Drawing.Size(80, 80);
@@ -1352,9 +1353,9 @@
             // 
             this.pbViola.BackColor = System.Drawing.Color.Transparent;
             this.pbViola.Image = global::Negozio_di_Viola.Properties.Resources.Viola;
-            this.pbViola.Location = new System.Drawing.Point(1131, 60);
+            this.pbViola.Location = new System.Drawing.Point(1070, 64);
             this.pbViola.Name = "pbViola";
-            this.pbViola.Size = new System.Drawing.Size(227, 396);
+            this.pbViola.Size = new System.Drawing.Size(215, 392);
             this.pbViola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbViola.TabIndex = 116;
             this.pbViola.TabStop = false;
@@ -1368,7 +1369,7 @@
             this.InsNumero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InsNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.InsNumero.ForeColor = System.Drawing.Color.White;
-            this.InsNumero.Location = new System.Drawing.Point(650, 642);
+            this.InsNumero.Location = new System.Drawing.Point(651, 693);
             this.InsNumero.Name = "InsNumero";
             this.InsNumero.Size = new System.Drawing.Size(237, 22);
             this.InsNumero.TabIndex = 117;
@@ -1416,7 +1417,7 @@
             this.sicuro2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sicuro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.sicuro2.ForeColor = System.Drawing.Color.White;
-            this.sicuro2.Location = new System.Drawing.Point(160, 655);
+            this.sicuro2.Location = new System.Drawing.Point(541, 579);
             this.sicuro2.Name = "sicuro2";
             this.sicuro2.Size = new System.Drawing.Size(358, 32);
             this.sicuro2.TabIndex = 120;
@@ -1425,12 +1426,26 @@
             this.sicuro2.UseVisualStyleBackColor = false;
             this.sicuro2.Visible = false;
             // 
+            // smile2
+            // 
+            this.smile2.BackColor = System.Drawing.Color.Transparent;
+            this.smile2.Image = global::Negozio_di_Viola.Properties.Resources.SmileFelice;
+            this.smile2.Location = new System.Drawing.Point(609, 367);
+            this.smile2.Margin = new System.Windows.Forms.Padding(4);
+            this.smile2.Name = "smile2";
+            this.smile2.Size = new System.Drawing.Size(80, 80);
+            this.smile2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.smile2.TabIndex = 121;
+            this.smile2.TabStop = false;
+            this.smile2.Visible = false;
+            // 
             // AssegnGuadagno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1370, 772);
+            this.Controls.Add(this.smile2);
             this.Controls.Add(this.sicuro2);
             this.Controls.Add(this.sicuro);
             this.Controls.Add(this.buttonCalcolatrice);
@@ -1495,6 +1510,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nosmile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbViola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smile2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1584,6 +1600,7 @@
         private System.Windows.Forms.Button buttonCalcolatrice;
         private System.Windows.Forms.Button sicuro;
         private System.Windows.Forms.Button sicuro2;
+        private System.Windows.Forms.PictureBox smile2;
 
 
     }
