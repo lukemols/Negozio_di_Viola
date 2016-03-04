@@ -132,6 +132,7 @@
             this.FumettoLabel1.Size = new System.Drawing.Size(70, 17);
             this.FumettoLabel1.TabIndex = 8;
             this.FumettoLabel1.Text = "Hai visto?";
+            this.FumettoLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FumettoLabel21
             // 
@@ -141,6 +142,7 @@
             this.FumettoLabel21.Size = new System.Drawing.Size(67, 17);
             this.FumettoLabel21.TabIndex = 9;
             this.FumettoLabel21.Text = "(Torna ...";
+            this.FumettoLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FumettoLabel22
             // 
@@ -150,6 +152,7 @@
             this.FumettoLabel22.Size = new System.Drawing.Size(105, 17);
             this.FumettoLabel22.TabIndex = 10;
             this.FumettoLabel22.Text = "per controllare)";
+            this.FumettoLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // NegozioButton
             // 
@@ -169,6 +172,7 @@
             this.FumettoLabel31.Size = new System.Drawing.Size(128, 17);
             this.FumettoLabel31.TabIndex = 12;
             this.FumettoLabel31.Text = "Voglio guadagnare";
+            this.FumettoLabel31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FumettoLabel41
             // 
@@ -178,6 +182,7 @@
             this.FumettoLabel41.Size = new System.Drawing.Size(167, 17);
             this.FumettoLabel41.TabIndex = 13;
             this.FumettoLabel41.Text = "Quanto devo mettere per";
+            this.FumettoLabel41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SmilePictureBox
             // 
@@ -204,24 +209,29 @@
             this.FumettoLabel5.Size = new System.Drawing.Size(73, 17);
             this.FumettoLabel5.TabIndex = 16;
             this.FumettoLabel5.Text = "Aiutami tu!";
+            this.FumettoLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FumettoLabel32
             // 
             this.FumettoLabel32.AutoSize = true;
+            this.FumettoLabel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FumettoLabel32.Location = new System.Drawing.Point(153, 112);
             this.FumettoLabel32.Name = "FumettoLabel32";
-            this.FumettoLabel32.Size = new System.Drawing.Size(32, 17);
+            this.FumettoLabel32.Size = new System.Drawing.Size(34, 19);
             this.FumettoLabel32.TabIndex = 18;
             this.FumettoLabel32.Text = "10€";
+            this.FumettoLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FumettoLabel42
             // 
             this.FumettoLabel42.AutoSize = true;
+            this.FumettoLabel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FumettoLabel42.Location = new System.Drawing.Point(206, 147);
             this.FumettoLabel42.Name = "FumettoLabel42";
-            this.FumettoLabel42.Size = new System.Drawing.Size(32, 17);
+            this.FumettoLabel42.Size = new System.Drawing.Size(34, 19);
             this.FumettoLabel42.TabIndex = 19;
             this.FumettoLabel42.Text = "20€";
+            this.FumettoLabel42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FumettoLabel43
             // 
@@ -231,6 +241,7 @@
             this.FumettoLabel43.Size = new System.Drawing.Size(72, 17);
             this.FumettoLabel43.TabIndex = 20;
             this.FumettoLabel43.Text = "al cliente?";
+            this.FumettoLabel43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // errorProvider1
             // 
@@ -244,6 +255,7 @@
             this.FumettoLabel33.Size = new System.Drawing.Size(20, 17);
             this.FumettoLabel33.TabIndex = 21;
             this.FumettoLabel33.Text = "€.";
+            this.FumettoLabel33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Fumetto2
             // 
