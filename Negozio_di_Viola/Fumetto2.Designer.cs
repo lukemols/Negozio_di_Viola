@@ -172,7 +172,7 @@
             this.FumettoLabel31.Size = new System.Drawing.Size(128, 17);
             this.FumettoLabel31.TabIndex = 12;
             this.FumettoLabel31.Text = "Voglio guadagnare";
-            this.FumettoLabel31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FumettoLabel31.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // FumettoLabel41
             // 
@@ -182,7 +182,7 @@
             this.FumettoLabel41.Size = new System.Drawing.Size(167, 17);
             this.FumettoLabel41.TabIndex = 13;
             this.FumettoLabel41.Text = "Quanto devo mettere per";
-            this.FumettoLabel41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FumettoLabel41.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // SmilePictureBox
             // 
@@ -241,7 +241,7 @@
             this.FumettoLabel43.Size = new System.Drawing.Size(72, 17);
             this.FumettoLabel43.TabIndex = 20;
             this.FumettoLabel43.Text = "al cliente?";
-            this.FumettoLabel43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FumettoLabel43.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // errorProvider1
             // 
@@ -255,7 +255,7 @@
             this.FumettoLabel33.Size = new System.Drawing.Size(20, 17);
             this.FumettoLabel33.TabIndex = 21;
             this.FumettoLabel33.Text = "€.";
-            this.FumettoLabel33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FumettoLabel33.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // Fumetto2
             // 

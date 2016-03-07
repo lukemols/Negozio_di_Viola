@@ -182,13 +182,13 @@ namespace Negozio_di_Viola
             FumettoLabel31.BackColor = Color.White;
             //Seconda Label terza riga            
             x = FumettoLabel31.Location.X + FumettoLabel31.Width;
-            FumettoLabel32.Text = guadagno.ToString("F2");
+            FumettoLabel32.Text = guadagno.ToString("F2") + "€";
             FumettoLabel32.Location = new Point(x, y);
             FumettoLabel32.Font = numberFont;
             FumettoLabel32.BackColor = Color.White;
             //Terza Label terza riga            
             x = FumettoLabel32.Location.X + FumettoLabel32.Width;
-            FumettoLabel33.Text = "€.";
+            FumettoLabel33.Text = ".";
             FumettoLabel33.Location = new Point(x, y);
             FumettoLabel33.Font = labelFont;
             FumettoLabel33.BackColor = Color.White;
@@ -200,13 +200,13 @@ namespace Negozio_di_Viola
             FumettoLabel41.BackColor = Color.White;
             //Seconda Label quarta riga
             x = FumettoLabel41.Location.X + FumettoLabel41.Width;
-            FumettoLabel42.Text = prezzoBase.ToString("F2");
+            FumettoLabel42.Text = prezzoBase.ToString("F2") + "€";
             FumettoLabel42.Location = new Point(x, y);
             FumettoLabel42.Font = numberFont;
             FumettoLabel42.BackColor = Color.White;
             //Terza Label quarta riga
             x = FumettoLabel42.Location.X + FumettoLabel42.Width;
-            FumettoLabel43.Text = "€ in fabbrica, quanto devo farle pagare al cliente?";
+            FumettoLabel43.Text = "in fabbrica, quanto devo farle pagare al cliente?";
             FumettoLabel43.Location = new Point(x, y);
             FumettoLabel43.Font = labelFont;
             FumettoLabel43.BackColor = Color.White;
