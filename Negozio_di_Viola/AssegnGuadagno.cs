@@ -2337,7 +2337,7 @@ namespace Negozio_di_Viola
             while(alpha_start < 255)
             {
                 alpha_start = alpha_start + 15;
-                this.porta_5.BackColor = Color.FromArgb(alpha_start, Color.White);
+                this.porta_5.BackColor = Color.FromArgb(alpha_start, Color.Orange);
 
                 Thread.Sleep(5);
                 ((Form)this).Update();
