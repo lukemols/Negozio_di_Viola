@@ -182,7 +182,7 @@ namespace Negozio_di_Viola
             FumettoLabel31.BackColor = Color.White;
             //Seconda Label terza riga            
             x = FumettoLabel31.Location.X + FumettoLabel31.Width;
-            FumettoLabel32.Text = guadagno.ToString("F2") + "€";
+            FumettoLabel32.Text = guadagno.ToString("F2") + " €";
             FumettoLabel32.Location = new Point(x, y - (FumettoLabel32.Height - FumettoLabel31.Height));
             FumettoLabel32.Font = numberFont;
             FumettoLabel32.BackColor = Color.White;
@@ -200,7 +200,7 @@ namespace Negozio_di_Viola
             FumettoLabel41.BackColor = Color.White;
             //Seconda Label quarta riga
             x = FumettoLabel41.Location.X + FumettoLabel41.Width;
-            FumettoLabel42.Text = prezzoBase.ToString("F2") + "€";
+            FumettoLabel42.Text = prezzoBase.ToString("F2") + " €";
             FumettoLabel42.Location = new Point(x, y - (FumettoLabel42.Height - FumettoLabel41.Height));
             FumettoLabel42.Font = numberFont;
             FumettoLabel42.BackColor = Color.White;
